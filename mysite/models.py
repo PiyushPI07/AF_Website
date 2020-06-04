@@ -11,7 +11,7 @@ class Image(models.Model):
 
 
 class Event(models.Model):
-    page_to_display = models.IntegerField(default=1)
+    page_to_display = models.IntegerField(default=0)
     bg_img = models.ImageField(upload_to='images/event')
     small_text = models.CharField(max_length=50)
 
@@ -25,6 +25,7 @@ class Member(models.Model):
     post = models.CharField(max_length=300)
     insta = models.URLField(default=" ")
     linkdin = models.URLField(default=" ")
+    head = models.BooleanField(default=False)
     member_img = models.ImageField(upload_to='images/members')
 
     def __str__(self):

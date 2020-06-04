@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'af_website.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-STATIC_URL = '/static/'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
