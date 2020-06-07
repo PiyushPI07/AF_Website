@@ -10,8 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a59e0482-0c2e-40b5-a936-8376d42af729" name="Default Changelist" comment="Initial">
-      <change beforePath="$PROJECT_DIR$/mysite/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/blog.html" afterDir="false" />
+    <list default="true" id="a59e0482-0c2e-40b5-a936-8376d42af729" name="Default Changelist" comment="Insta">
+      <change beforePath="$PROJECT_DIR$/mysite/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../website" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -96,7 +100,7 @@
       <workItem from="1591103651060" duration="1120000" />
       <workItem from="1591325333205" duration="7395000" />
       <workItem from="1591313125148" duration="76000" />
-      <workItem from="1591528425700" duration="4301000" />
+      <workItem from="1591528425700" duration="7606000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1590352715230</created>
@@ -154,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591529365683</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Insta">
+      <created>1591532735727</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591532735727</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,29 +186,30 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Content" />
     <MESSAGE value="Initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+    <MESSAGE value="Insta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Insta" />
   </component>
   <component name="WindowStateProjectService">
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591309642172">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591309642172" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1591325626195">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1591536925142">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1591325626195" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1591529371722">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1591536925142" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1591537875191">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1591529371722" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1591537875191" />
     <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591532727590">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591532727590" />
-    <state x="414" y="140" width="730" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591530739059">
+    <state x="414" y="140" width="730" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591536855982">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="414" y="140" width="730" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1591530739059" />
+    <state x="414" y="140" width="730" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1591536855982" />
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1591103820549">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

@@ -14,3 +14,6 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('udaan/', views.udaan, name='udaan')
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

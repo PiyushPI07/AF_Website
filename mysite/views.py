@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from .models import *
 from django.conf import settings
+from django.shortcuts import render
+
+from .models import *
 
 
 def index(request):
