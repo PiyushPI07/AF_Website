@@ -8,11 +8,13 @@ def index(request):
     image_gallery_full = Image.objects.all()
     blog_list = Blog.objects.all()
     event_list = Event.objects.all()
+    art_list = Art.objects.all()
     image_gallery_short = Image.objects.filter(display_on_index=True)
     context = {
         'full_member_list': full_member_list,
         'image_gallery_full': image_gallery_full,
         'blog_list': blog_list,
+        'art_list': art_list,
         'event_list': event_list,
         'image_gallery_short': image_gallery_short
     }
@@ -24,10 +26,12 @@ def about(request):
     image_gallery_full = Image.objects.all()
     blog_list = Blog.objects.all()
     event_list = Event.objects.all()
+    art_list = Art.objects.all()
     image_gallery_short = Image.objects.filter(display_on_index=True)
     context = {
         'full_member_list': full_member_list,
         'image_gallery_full': image_gallery_full,
+        'art_list': art_list,
         'blog_list': blog_list,
         'event_list': event_list,
         'image_gallery_short': image_gallery_short
@@ -44,6 +48,7 @@ def blog(request):
     context = {
         'full_member_list': full_member_list,
         'image_gallery_full': image_gallery_full,
+
         'blog_list': blog_list,
         'event_list': event_list,
         'image_gallery_short': image_gallery_short
@@ -72,12 +77,14 @@ def blog_details(request):
 def udaan(request):
     full_member_list = Member.objects.all()
     image_gallery_full = Image.objects.all()
+    art_list = Art.objects.all()
     blog_list = Blog.objects.all()
     event_list = Event.objects.all()
     image_gallery_short = Image.objects.filter(display_on_index=True)
     context = {
         'full_member_list': full_member_list,
         'image_gallery_full': image_gallery_full,
+        'art_list': art_list,
         'blog_list': blog_list,
         'event_list': event_list,
         'image_gallery_short': image_gallery_short
