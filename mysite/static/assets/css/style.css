@@ -3311,6 +3311,58 @@ hero-btn {
   position: relative;
   z-index: 1;
 }
+.main-header .main-menu ul li:last-child {
+    margin-right: 0;
+}
+
+.main-header .main-menu ul li.active > a {
+    color: #ff0000;
+}
+
+.main-header .main-menu ul li.active > a:after {
+    opacity: 1;
+}
+
+.main-header .main-menu ul li:hover > a {
+    color: #ff0000;
+}
+
+.main-header .main-menu ul li:hover > a:after {
+    opacity: 1;
+}
+
+.main-header .main-menu ul li a {
+    color: #ffffff;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Oswald", sans-serif;
+    padding: 4px 0px;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.main-header .main-menu ul li a:after {
+    position: absolute;
+    left: 0;
+    top: 75px;
+    height: 5px;
+    width: 80%;
+    background: #ff0000;
+    content: "";
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s ease-in-out 0s;
+    border-radius: 3px;
+}
 
 /* line 85, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
 .main-header .main-menu ul li a {
@@ -4356,6 +4408,7 @@ hero-btn {
 /* line 4, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_team.scss */
 .team-area .single-team .team-img {
   overflow: hidden;
+
 }
 
 /* line 6, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_team.scss */
