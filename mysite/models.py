@@ -14,6 +14,7 @@ class Event(models.Model):
     page_to_display = models.IntegerField(default=0)
     bg_img = models.ImageField(upload_to='images/event')
     small_text = models.CharField(max_length=50)
+    created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.small_text
@@ -26,6 +27,7 @@ class Member(models.Model):
     insta = models.URLField(default=" ")
     linkdin = models.URLField(default=" ")
     head = models.BooleanField(default=False)
+    testimonial = models.TextField(default=" ")
     member_img = models.ImageField(upload_to='images/members')
 
     def __str__(self):
@@ -39,6 +41,21 @@ class Blog(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
+    blog_img = models.ImageField(upload_to='images/blogs')
+
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.title
+
+
+class Art(models.Model):
+    title = models.CharField(max_length=50, unique=True)
+    art_filter = models.IntegerField(default=0)
+    author = models.ForeignKey(Member, on_delete=models.CASCADE, related_name='art_posts')
+    created_on = models.DateTimeField(auto_now_add=True)
+    art_img = models.ImageField(upload_to='images/art')
 
     class Meta:
         ordering = ['-created_on']

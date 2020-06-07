@@ -172,7 +172,7 @@
                         <div class="support-caption">
                             <p class="pera-top">Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess cillum dolore egru lofrre dsu quality mollit anim laborumuis au dolor in voluptate velit cillu.</p>
                             <p class="mb-65">Mollit anim laborum.Dvcuis aute serunt  iruxvfg dhjkolohr indd re voluptate velit esscillumlore eu quife nrulla parihatur. Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg dhjinulpadeserunt moll.</p>
-                            <a href="about.html" class="btn post-btn">More About Us</a>
+                            <a href="../about" class="btn post-btn">More About Us</a>
                         </div>
                     </div>
                 </div>
@@ -194,50 +194,19 @@
                 </div>
             </div>
             <div class="row">
+                      {% for art in arts_list %}
                 <div class="col-lg-6 col-md-6 col-sm-10">
                     <div class="single-services mb-100">
                         <div class="services-img">
-                            <img src="{% static 'assets/img/gallery/services1.png' %}" alt="">
+                            <img src="{{ art.art_img.url }}" alt="">
                             </div>
                             <div class="services-caption">
-                            <span>Strategy planing</span>
-                            <p><a href="#">Within the construction industry as their overdraft</a></p>
+                            <span>{{ art.author }}</span>
+                            <p>{{ art.created_on }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-10">
-                    <div class="single-services mb-100">
-                        <div class="services-img">
-                            <img src="{% static 'assets/img/gallery/services2.png' %}" alt="">
-                            </div>
-                            <div class="services-caption">
-                            <span>Strategy planing</span>
-                            <p><a href="#">Within the construction industry as their overdraft</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-10">
-                    <div class="single-services mb-100">
-                        <div class="services-img">
-                            <img src="{% static 'assets/img/gallery/services3.png' %}" alt="">
-                            </div>
-                            <div class="services-caption">
-                            <span>Strategy planing</span>
-                            <p><a href="#">Within the construction industry as their overdraft</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-10">
-                    <div class="single-services mb-100">
-                        <div class="services-img">
-                            <img src="../static/assets/img/gallery/services4.png" alt="">
-                            </div>
-                            <div class="services-caption">
-                            <span>Strategy planing</span>
-                            <p><a href="#">Within the construction industry as their overdraft</a></p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -246,9 +215,11 @@
     <div class="testimonial-area testimonial-padding" data-background="{% static 'assets/img/gallery/section_bg04.jpg' %}">
         <div class="container ">
             <div class="row d-flex justify-content-center">
+
                 <div class="col-xl-10 col-lg-10 col-md-9">
                     <div class="h1-testimonial-active">
-                        <!-- Single Testimonial -->
+                        <!-- Single Testimonial --> {% for member in full_member_list %}
+                        {% if member.head %}
                         <div class="single-testimonial text-center">
                             <!-- Testimonial Content -->
                             <div class="testimonial-caption ">
@@ -259,45 +230,22 @@
                                     <path fill-rule="evenodd"  fill="rgb(240, 78, 60)"
                                     d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"/>
                                     </svg>
-                                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas. </p>
+                                    <p>{{ member.testimonial }}</p>
                                 </div>
                                 <!-- founder -->
                                 <div class="testimonial-founder d-flex align-items-center justify-content-center">
                                     <div class="founder-img">
-                                        <img src="{% static 'assets/img/gallery/Homepage_testi.png' %}" alt="">
+                                        <img src="{{ member.member_img.url }}" alt="">
                                     </div>
                                     <div class="founder-text">
-                                        <span>Jessya Inn</span>
-                                        <p>Chif Photographer</p>
+                                        <span>{{ member.member_name }}</span>
+                                        <p>{{ member.post }}</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>{% endif %}{% endfor %}
                         <!-- Single Testimonial -->
-                        <div class="single-testimonial text-center">
-                            <!-- Testimonial Content -->
-                            <div class="testimonial-caption ">
-                                <div class="testimonial-top-cap">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="67px" height="49px">
-                                    <path fill-rule="evenodd"  fill="rgb(240, 78, 60)"
-                                    d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"/>
-                                    </svg>
-                                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas. </p>
-                                </div>
-                                <!-- founder -->
-                                <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                                    <div class="founder-img">
-                                        <img src="{% static 'assets/img/gallery/Homepage_testi.png' %}" alt="">
-                                    </div>
-                                    <div class="founder-text">
-                                        <span>Jessya Inn</span>
-                                        <p>Chif Photographer</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -359,46 +307,31 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle mb-100">
-                        <span>Our Team</span>
-                        <h2>Our Blog</h2>
+                        <span>Our Events</span>
+
                     </div>
                 </div>
             </div>
             <div class="row">
+                {% for event in events_list %}
                 <div class="col-xl-6 col-lg-6 col-md-6">
                     <div class="home-blog-single mb-30">
                         <div class="blog-img-cap">
                             <div class="blog-img">
-                                <img src="{% static 'assets/img/gallery/home_blog1.png' %}" alt="">
+                                <img src="{{ event.bg_img.url }}" alt="">
                                 <ul>
-                                    <li>By Admin   -   October 27, 2020</li>
+                                    <li>{{ event.small_text }}</li>
                                 </ul>
                             </div>
                             <div class="blog-cap">
-                                <h3><a href="blog_details.html">16 Easy Ideas to Use in  Everyday</a></h3>
-                                <p>Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.</p>
+                                <h3><a href="../blog_details"></a></h3>
+                                <p>{{ event.created_on }}</p>
                                 <a href="blog_details.html" class="more-btn">Read more</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="home-blog-single mb-30">
-                        <div class="blog-img-cap">
-                            <div class="blog-img">
-                                <img src="{% static 'assets/img/gallery/home_blog2.png' %}" alt="">
-                                <ul>
-                                    <li>By Admin   -   October 27, 2020</li>
-                                </ul>
-                            </div>
-                            <div class="blog-cap">
-                                <h3><a href="blog_details.html">16 Easy Ideas to Use in  Everyday</a></h3>
-                                <p>Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.</p>
-                                <a href="blog_details.html" class="more-btn">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -408,7 +341,7 @@
         <div class="container">
             <div class="brand-active brand-border pb-40">
                 <div class="single-brand">
-                    <img src="{% static 'assets/img/gallery/brand1.png' %}" alt="">
+
                 </div>
             </div>
         </div>

@@ -10,278 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a59e0482-0c2e-40b5-a936-8376d42af729" name="Default Changelist" comment="Initial">
-      <change afterPath="$PROJECT_DIR$/mysite/static/assets/img/hero/h1_hero.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/static/assets/img/logo/download.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/static/assets/img/logo/img.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/af_website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/af_website/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultingbiz (1)/consultingbiz/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultingbiz (1)/consultingbiz/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultingbiz (1)/consultingbiz/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultingbiz (1)/consultingbiz/blog_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/blog_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultingbiz (1)/consultingbiz/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultingbiz (1)/consultingbiz/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultingbiz (1)/consultingbiz/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultingbiz (1)/consultingbiz/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultingbiz (1)/consultingbiz/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultingbiz (1)/consultingbiz/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/udaan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/img/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/img/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/js/jquery-1.11.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/js/jquery-1.11.0.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/js/jquery.nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/js/jquery.nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shAutoloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shAutoloader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushAS3.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushAS3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushAppleScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushAppleScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushBash.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushBash.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushCSharp.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushCSharp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushColdFusion.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushColdFusion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushCpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushCpp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushCss.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushCss.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushDelphi.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushDelphi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushDiff.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushDiff.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushErlang.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushErlang.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushGroovy.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushGroovy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushJScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushJScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushJava.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushJava.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushJavaFX.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushJavaFX.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushPerl.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushPerl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushPhp.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushPhp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushPlain.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushPlain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushPowerShell.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushPowerShell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushPython.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushPython.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushRuby.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushRuby.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushSass.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushSass.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushScala.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushScala.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushSql.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushSql.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushVb.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushVb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shBrushXml.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shBrushXml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shCore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shCore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/scripts/shLegacy.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/scripts/shLegacy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shCore.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shCore.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shCoreDefault.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shCoreDefault.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shCoreDjango.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shCoreDjango.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shCoreEclipse.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shCoreEclipse.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shCoreEmacs.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shCoreEmacs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shCoreFadeToGrey.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shCoreFadeToGrey.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shCoreMDUltra.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shCoreMDUltra.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shCoreMidnight.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shCoreMidnight.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shCoreRDark.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shCoreRDark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shThemeDefault.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shThemeDefault.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shThemeDjango.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shThemeDjango.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shThemeEclipse.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shThemeEclipse.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shThemeEmacs.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shThemeEmacs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shThemeFadeToGrey.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shThemeFadeToGrey.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shThemeMDUltra.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shThemeMDUltra.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shThemeMidnight.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shThemeMidnight.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/Doc/syntax-highlighter/styles/shThemeRDark.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/Doc/syntax-highlighter/styles/shThemeRDark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/animate.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/animate.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/flaticon.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/flaticon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/fontawesome-all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/fontawesome-all.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/magnific-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/magnific-popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/nice-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/nice-select.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/normalize.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/normalize.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/owl.carousel.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/price_rangs.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/price_rangs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/slick.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/slick.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/slicknav.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/slicknav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/style.map" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/style.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/css/themify-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/css/themify-icons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/Flaticon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/Flaticon.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/Flaticon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/Flaticon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/Flaticon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/Flaticon.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/Flaticon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/Flaticon.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/Flaticon.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/Flaticon.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/_flaticon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/_flaticon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-brands-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-brands-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-brands-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-brands-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-brands-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-regular-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-regular-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-regular-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-regular-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-regular-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-solid-900.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-solid-900.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-solid-900.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-solid-900.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/fa-solid-900.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/flaticon.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/flaticon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/flaticon.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/flaticon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/themify.eot" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/themify.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/themify.svg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/themify.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/themify.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/themify.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/fonts/themify.woff" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/fonts/themify.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/about/about_lft.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/about/about_lft.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/about/about_right.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/about/about_right.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/adapt_icon/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/adapt_icon/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/adapt_icon/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/adapt_icon/1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/adapt_icon/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/adapt_icon/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/adapt_icon/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/adapt_icon/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/banner/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/banner/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/blog/author.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/blog/author.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/blog/learn_about_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/blog/learn_about_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/blog/single_blog_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/blog/single_blog_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/blog/single_blog_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/blog/single_blog_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/blog/single_blog_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/blog/single_blog_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/blog/single_blog_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/blog/single_blog_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/blog/single_blog_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/blog/single_blog_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/blog/slide_thumb_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/blog/slide_thumb_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/comment/comment_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/comment/comment_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/comment/comment_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/comment/comment_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/comment/comment_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/comment/comment_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/a2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/a2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/d.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/disabled-check.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/disabled-check.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/disabled-radio.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/disabled-radio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/f1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/f1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/f2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/f2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/f3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/f3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/f4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/f4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/f5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/f5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/f6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/f6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/f7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/f7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/f8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/f8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/g1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/g1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/g2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/g2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/g3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/g3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/g4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/g4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/g5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/g5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/g6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/g6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/g7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/g7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/g8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/g8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/primary-check.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/primary-check.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/primary-radio.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/primary-radio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/success-check.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/success-check.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/elements/success-radio.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/elements/success-radio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/Homepage_testi.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/Homepage_testi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/about.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/about.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/brand1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/brand1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/brand2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/brand2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/brand3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/brand3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/brand4.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/brand4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/brand5.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/brand5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/footer_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/footer_bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/home_blog1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/home_blog1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/home_blog2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/home_blog2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/section_bg02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/section_bg02.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/section_bg03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/section_bg03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/section_bg04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/section_bg04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/services1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/services1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/services2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/services2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/services3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/services3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/services4.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/services4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/t1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/t1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/team1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/team1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/team2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/team2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/gallery/team3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/gallery/team3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/hero/h1_hero.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/hero/hero2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/hero/hero2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/logo/loder.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/logo/loder.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/logo/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/logo/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/logo/logo2_footer.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/logo/logo2_footer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/our_blog/blog-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/our_blog/blog-img1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/next.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/next.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/post_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/post_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/post_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/post_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/post_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/post_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/post_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/post_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/post_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/post_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/post_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/post_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/post_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/post_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/post_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/post_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/post_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/post_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/post_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/post_9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/post/preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/post/preview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/prising/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/prising/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/prising/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/prising/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/prising/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/prising/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/prising/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/prising/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/prising/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/prising/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/prising/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/prising/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/prising/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/prising/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/prising/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/prising/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/prising/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/prising/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/prising/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/prising/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/service/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/service/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/service/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/service/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/service/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/service/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/service/service_icon_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/service/service_icon_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/service/service_icon_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/service/service_icon_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/service/service_icon_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/service/service_icon_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/service/service_icon_bg_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/service/service_icon_bg_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/team/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/team/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/team/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/team/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/img/team/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/img/team/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/animated.headline.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/animated.headline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/jquery.ajaxchimp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/jquery.ajaxchimp.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/jquery.counterup.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/jquery.counterup.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/jquery.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/jquery.form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/jquery.magnific-popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/jquery.magnific-popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/jquery.nice-select.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/jquery.nice-select.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/jquery.paroller.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/jquery.paroller.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/jquery.slicknav.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/jquery.slicknav.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/jquery.sticky.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/jquery.sticky.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/jquery.validate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/jquery.validate.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/mail-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/mail-script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/one-page-nav-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/one-page-nav-min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/owl.carousel.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/popper.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/price-range.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/price-range.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/slick.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/slick.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/vendor/jquery-1.12.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/vendor/jquery-1.12.4.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/vendor/modernizr-3.5.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/vendor/modernizr-3.5.0.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/js/wow.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/js/wow.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_about.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_blog_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_blog_page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_bradcam.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_bradcam.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_categories.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_categories.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_color.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_color.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_contact.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_count_down.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_count_down.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_elements.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_elements.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_extend.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_extend.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_h1-hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_h1-hero.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_headerMenu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_headerMenu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_overlay.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_overlay.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_services.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_services.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_services_section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_services_section.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_team.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_team.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_testimonial.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_testimonial.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/_wantTowork.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/_wantTowork.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/static/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/assets/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="a59e0482-0c2e-40b5-a936-8376d42af729" name="Default Changelist" comment="Initial" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -300,7 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../website" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -364,6 +93,7 @@
       <workItem from="1590836417685" duration="3630000" />
       <workItem from="1591103651060" duration="1120000" />
       <workItem from="1591325333205" duration="7395000" />
+      <workItem from="1591313125148" duration="76000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1590352715230</created>
@@ -400,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590353515850</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Initial">
+      <created>1591313147347</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591313147347</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,10 +168,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1591325626195" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590353521316">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1591313176156">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1590353521316" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1591313176156" />
     <state x="414" y="140" width="730" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591309737420">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

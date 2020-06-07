@@ -6,5 +6,5 @@ admin.site.register(Image)
 admin.site.register(Member)
 admin.site.register(Event)
 admin.site.register(Blog)
-
+admin.site.register(Art)
 
