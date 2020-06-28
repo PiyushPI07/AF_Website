@@ -41,6 +41,9 @@ The Model-View-Template (MVT) is slightly different from MVC. In fact the main d
 
 - Further implemented features to be based on the requirements specified by the core members.
 
+- static load for the decided template
+
+
 ## User Guidelines
 
 1. Clone the repository.
