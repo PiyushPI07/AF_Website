@@ -25,11 +25,9 @@ The Model-View-Template (MVT) is slightly different from MVC. In fact the main d
 
 - ModelViewer HTML tag- <modelviewer> can been used in order to display the 3D models that are uploaded as .glb or .gltf files.
 
-- There are appropriate filters in place for the content that is to be displayed on subsystem pages. 
+- There are appropriate filters in place for the content that is to be displayed on various pages. 
 
 - A mailer can be implemented for the users to get latest updates via email.
-
-- Google Maps API has been used to embed a google map the diplays the location of National Institute Of Technology, Karnataka.
 
 - Embedding youtube video links to display the videos uploaded on the AF youtube youtube channel.
 
