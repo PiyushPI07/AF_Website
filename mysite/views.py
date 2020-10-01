@@ -75,23 +75,33 @@ def blog_details(request):
     return render(request, 'blog_details.html', context=context)
 
 
-def udaan(request):
-    full_member_list = Member.objects.all()
-    image_gallery_full = Image.objects.all()
-    art_list = Art.objects.all()
-    blog_list = Blog.objects.all()
-    event_list = Event.objects.all()
-    image_gallery_short = Image.objects.filter(display_on_index=True)
-    context = {
-        'full_member_list': full_member_list,
-        'image_gallery_full': image_gallery_full,
-        'art_list': art_list,
-        'blog_list': blog_list,
-        'event_list': event_list,
-        'image_gallery_short': image_gallery_short
-    }
-    return render(request, 'udaan.html', context=context)
+# def udaan(request):
+#     full_member_list = Member.objects.all()
+#     image_gallery_full = Image.objects.all()
+#     art_list = Art.objects.all()
+#     blog_list = Blog.objects.all()
+#     event_list = Event.objects.all()
+#     image_gallery_short = Image.objects.filter(display_on_index=True)
+#     context = {
+#         'full_member_list': full_member_list,
+#         'image_gallery_full': image_gallery_full,
+#         'art_list': art_list,
+#         'blog_list': blog_list,
+#         'event_list': event_list,
+#         'image_gallery_short': image_gallery_short
+#     }
+#     return render(request, 'udaan.html', context=context)
 
+def udaan_view(request, *args, **kwargs):
+    static_data= Udaan_static.objects.get(id=1)
+    carousel_imgs = Udaan_image.objects.filter(display_on_caurosel = True)
+    events = Udaan_event.objects.all()
+    context = {
+        'static': static_data,
+        'carousel_images': carousel_imgs,
+        'event_list': events
+    }
+    return render(request, 'udaan.html', context)
 
 def contact(request):
     image_gallery_full = Image.objects.all()
