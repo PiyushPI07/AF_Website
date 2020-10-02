@@ -10,9 +10,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
+        {% load static %}
         <style>
             body{
-                background-image: url({{static.bg_pic.url}}) !important;
+                background-image: url({% static 'udaan/assets/img/background/bg.jpg' %}) !important;
                 background-repeat: no-repeat !important;
                 background-attachment: fixed !important;
                 background-size: cover !important;
