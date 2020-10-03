@@ -67,15 +67,14 @@ class Art(models.Model):
 #Udaan model
 class Udaan_static(models.Model):
     main_description= models.TextField()
-    bg_pic= models.ImageField( upload_to='images/udaan/background', height_field=None, width_field=None, max_length=None)
     date= models.DateTimeField( auto_now=False, auto_now_add=False, null = True)
+    insta_keyword= models.CharField( max_length=50)
     def __str__(self):
         return self.main_description
 
 
 class Udaan_image(models.Model):
     img_name = models.CharField( max_length=50)
-    # img_event = models.CharField( max_length=50, none = False)
     img = models.ImageField( upload_to='images/udaan/carousel', height_field=None, width_field=None, max_length=None)
     alt_text = models.CharField( max_length=50)
     display_on_caurosel = models.BooleanField(default = False)
