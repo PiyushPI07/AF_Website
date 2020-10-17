@@ -41,7 +41,7 @@ class Blog(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    blog_img = models.ImageField(upload_to='images/blogs')
+    blog_img = models.ImageField(upload_to='images/blogs', null=True)
 
     class Meta:
         ordering = ['-created_on']
