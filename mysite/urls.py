@@ -12,7 +12,7 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('blog_details/', views.blog_details, name='blog_details'),
     path('contact/', views.contact, name='contact'),
-    path('udaan/', views.udaan, name='udaan')
+    path('udaan/', views.udaan_view, name='udaan')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

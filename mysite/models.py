@@ -64,3 +64,26 @@ class Art(models.Model):
         return self.title
 
 # Create your models here.
+#Udaan model
+class Udaan_static(models.Model):
+    main_description= models.TextField()
+    date= models.DateTimeField( auto_now=False, auto_now_add=False, null = True)
+    def __str__(self):
+        return self.main_description
+
+
+class Udaan_image(models.Model):
+    img_name = models.CharField( max_length=50)
+    img = models.ImageField( upload_to='images/udaan/carousel', height_field=None, width_field=None, max_length=None)
+    alt_text = models.CharField( max_length=50)
+    display_on_caurosel = models.BooleanField(default = False)
+
+    def __str__(self):
+        return self.alt_text
+
+class Udaan_event(models.Model):
+    event_name= models.CharField( max_length=50)
+    event_description= models.TextField()
+    event_img= models.ImageField( upload_to='images/udaan/events', height_field=None, width_field=None, max_length=None)
+    def __str__(self):
+        return self.event_name   
