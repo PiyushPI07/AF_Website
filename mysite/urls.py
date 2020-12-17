@@ -13,7 +13,8 @@ urlpatterns = [
     path('<int:pk>/blog_post', views.blog_post, name='blog_post'),
     path('contact/', views.contact, name='contact'),
     path('udaan/', views.udaan, name='udaan'),
-    path('gallery/', views.gallery, name='gallery')
+    path('gallery/', views.gallery, name='gallery'),
+    path('events/', views.events, name='events')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

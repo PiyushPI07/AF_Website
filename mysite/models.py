@@ -62,7 +62,8 @@ class EventImage(models.Model):
     title = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='event_posts')
 
     def __str__(self):
-        return self.alt_text
+        return self.title
+
 
 class ArtImage(models.Model):
     art_image = models.ImageField(upload_to='images/art')
@@ -79,4 +80,3 @@ class Gallery(models.Model):
 
     class Meta:
         ordering = ['-created_on']
-

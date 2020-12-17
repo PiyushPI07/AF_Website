@@ -82,14 +82,10 @@
                                                 <ul id="navigation">
                                                 <li><a href="../index">Home</a></li>
                                                 <li><a href="../about">About</a></li>
+                                                <li><a href="../blog">Blog</a></li>
+                                                <li><a href="../events">Events</a></li>
                                                 <li><a href="../udaan">Udaan</a></li>
-                                                <li><a href="../blog">Blog</a>
-                                                    <ul class="submenu">
-                                                        {%  for blog in blogs_list %}
-                                                        <li><a href="../{{ blog.get_absolute_url }}/blog_post">{{ blog.title }}</a></li>
-                                                        {% endfor %}
-                                                    </ul>
-                                                </li>
+                                                <li><a href="../gallery">Gallery</a></li>
                                                 <li><a href="../contact">Contact</a></li>
                                                 </ul>
                                             </nav>

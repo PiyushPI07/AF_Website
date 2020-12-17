@@ -1,6 +1,5 @@
 from django.conf import settings
-from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.shortcuts import get_object_or_404, render
 
 from .models import *
 
@@ -46,15 +45,14 @@ def blog(request):
     return render(request, 'blog.html', context=context)
 
 
-def blog_post(request):
+def blog_post(request,pk):
     full_member_list = Member.objects.all()
-    blog_list = Blog.objects.objects.get(id)
+    blog_list = Blog.objects.filter(id=pk)
     event_list = Event.objects.all()
     context = {
         'full_member_list': full_member_list,
         'blog_list': blog_list,
-        'event_list': event_list,
-        'image_gallery_short': image_gallery_short
+        'event_list': event_list
     }
     return render(request, 'blog_post.html', context=context)
 
