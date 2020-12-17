@@ -10,9 +10,10 @@ urlpatterns = [
     path('index', views.index, name='index1'),
     path('about/', views.about, name='about'),
     path('blog/', views.blog, name='blog'),
-    path('blog_details/', views.blog_details, name='blog_details'),
+    path('<int:pk>/blog_post', views.blog_post, name='blog_post'),
     path('contact/', views.contact, name='contact'),
-    path('udaan/', views.udaan, name='udaan')
+    path('udaan/', views.udaan, name='udaan'),
+    path('gallery/', views.gallery, name='gallery')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
