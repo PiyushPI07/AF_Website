@@ -97,9 +97,9 @@ class RecruitmentApplicant(models.Model):
     recruitmentYear = models.CharField(default=year, max_length=4)
 
     #overriden delet for simultenous deletion of reference account
-    def delete(self, *args, **kwargs):
-        self.account.delete()
-        return super(self.__class__, self).delete(*args, **kwargs)
+    # def delete(self, *args, **kwargs):
+    #     self.applicant.delete()
+    #     return super(self.__class__, self).delete(*args, **kwargs)
 
 #To delete the acccount when recruimentapplication in deleted post method for admin panel deletion
 @receiver(post_delete, sender=RecruitmentApplicant)
