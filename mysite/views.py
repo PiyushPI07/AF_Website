@@ -17,7 +17,8 @@ def index(request):
         'blog_list': blog_list,
         'art_list': art_list,
         'event_list': event_list,
-        'image_gallery_short': image_gallery_short
+        'image_gallery_short': image_gallery_short,
+        'render_recruitment_form': True
     }
     return render(request, 'index.html', context=context)
 

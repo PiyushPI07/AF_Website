@@ -25,19 +25,25 @@ SECRET_KEY = 'r!)w!+!++y9r+p1qi7qg*y(r33y0n$7-&fpm6%_67%3i30%akd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    #custom created apps must be at top othrewise password reset template will get overriden by django's default template sitting in django.controb.auth app
+    'mysite',
+    'account',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mysite'
 ]
 
 MIDDLEWARE = [
@@ -81,6 +87,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'account.Account'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

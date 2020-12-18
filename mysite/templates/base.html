@@ -69,17 +69,29 @@
                                 <div class="main-menu d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="../index">Home</a></li>
-                                            <li><a href="../about">About</a></li>
-                                            <li><a href="../udaan">Udaan</a></li>
+                                            <li><a href="{% url 'index' %}">Home</a></li>
+                                            <li><a href="{% url 'about' %}">About</a></li>
+                                            <li><a href="{% url 'udaan' %}">Udaan</a></li>
                                             <li><a href="#">Blog</a>
                                                 <ul class="submenu">
-                                                    <li><a href="../blog">Blog</a></li>
-                                                    <li><a href="../blog_details">Blog Details</a></li>
-                                                    <li><a href="elements.html">Element</a></li>
+                                                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                                                    <li><a href="{% url 'blog_details' %}">Blog Details</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="../contact">Contact</a></li>
+                                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                                            {% if request.user.is_authenticated %}
+                                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                                <li><a href="{% url 'application status' %}">Application Status</a></li>
+                                            {% else %}
+                                                {% if  True %}
+                                                <li><a href="#">Recruitments</a>
+                                                    <ul class="submenu">
+                                                        <li><a href="{% url 'register' %}">Register</a></li>
+                                                        <li><a href="{% url 'login' %}">Log In</a></li>
+                                                    </ul>
+                                                </li>
+                                                {%endif%}
+                                            {%endif%}
                                         </ul>
                                     </nav>
                                 </div>
