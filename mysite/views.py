@@ -19,12 +19,8 @@ def index(request):
 
 def about(request):
     full_member_list = Member.objects.all()
-    blog_list = Blog.objects.all()
-    event_list = Event.objects.all()
     context = {
-        'full_member_list': full_member_list,
-        'blog_list': blog_list,
-        'event_list': event_list
+        'full_member_list': full_member_list
     }
     return render(request, 'about.html', context=context)
 
