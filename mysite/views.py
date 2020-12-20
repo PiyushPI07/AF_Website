@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.shortcuts import render
-
+from django.http import HttpResponseRedirect
+from account.forms import VolunteerForm, SandArtRegistrationForm
+from django.views.decorators.cache import cache_control
 from .models import *
 
 
@@ -100,8 +102,20 @@ def udaan_view(request, *args, **kwargs):
     context = {
         'static': static_data,
         'carousel_images': carousel_imgs,
-        'event_list': events
+        'event_list': events,
+        'is_form_submitted': False,
     }
+
+    if request.POST:
+        form = SandArtRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('thank_you')
+        else:
+            context['form'] = form
+    else:
+        form = SandArtRegistrationForm()
+        context['form'] = form
     return render(request, 'udaan.html', context)
 
 def contact(request):
@@ -112,3 +126,6 @@ def contact(request):
         'image_gallery_short': image_gallery_short,
     }
     return render(request, 'contact.html', context=context)
+def thank_you(request):
+    return render(request, 'thank_you.html', context={})
+

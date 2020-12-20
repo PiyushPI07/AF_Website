@@ -29,7 +29,9 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('blog_details/', views.blog_details, name='blog_details'),
     path('contact/', views.contact, name='contact'),
-    path('udaan/', views.udaan_view, name='udaan')
+    path('udaan/', views.udaan_view, name='udaan'),
+    path('udaan/thank_you', views.thank_you, name='thank_you'),
+    path('volunteer_registration', volunteer_form_view, name='volunteer_registration')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -3,6 +3,7 @@ from django.contrib.auth import login, authenticate, logout
 from .forms import *
 from .templates import *
 from .models import RecruitmentApplicant, MyAccountManager, Account
+from django.http import HttpResponseRedirect
 def application_status_view(request):
     applicant = RecruitmentApplicant.objects.get(email=request.user.email)
     return render(request, 'application_status.html', context={'applicant': applicant})
@@ -57,3 +58,19 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('index')
+
+def volunteer_form_view(request):
+    context = {}
+    if request.POST:
+        form = VolunteerForm(request.POST)
+        if form.is_valid():
+            form_details = form.save(commit=False)
+            form_details.event = 'Engineer'
+            form_details.save()
+            return redirect('thank_you')
+        else:
+            context['form'] = form
+    else:
+        form = VolunteerForm()
+        context['form'] = form
+    return render(request, 'volunteer_form.html', context=context)

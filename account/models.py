@@ -106,3 +106,57 @@ class RecruitmentApplicant(models.Model):
 def post_delete_user(sender, instance, *args, **kwargs):
     if instance.applicant: 
         instance.applicant.delete()
+
+class SandArtReg(models.Model):
+    team_name = models.CharField(verbose_name='Team Name', max_length=50, unique=True, blank=False)
+    college = models.CharField(verbose_name='College/University Name',max_length=50)
+    mem1 = models.CharField(verbose_name='First Member Name', max_length=30, blank=False)
+    mem2 = models.CharField(verbose_name='Second Member Name', max_length=30, blank=True)
+    mem3 = models.CharField(verbose_name='Third Member Name', max_length=30, blank=True)
+    mem4 = models.CharField(verbose_name='Fourth Member Name', max_length=30, blank=True)
+    mem5 = models.CharField(verbose_name='Fifth Member Name', max_length=30, blank=True)
+    mem6 = models.CharField(verbose_name='Sixth Member Name', max_length=30, blank=True)
+    phone_regex = RegexValidator(regex=r'^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$', message="Invalid phone number")
+    phone_number = models.CharField(verbose_name="Phone Number", validators=[phone_regex], max_length=17, blank=False) 
+    email = models.EmailField()
+
+class Volunteer(models.Model):
+    FY = 'first_year'
+    SY = 'second_year'
+    TY = 'third_year'
+    FNY = 'final_year'
+    PG = 'pg'
+    year_choices = [
+        (FY, 'First Year' ),
+        (SY, 'Second Year' ),
+        (TY, 'Third Year' ),
+        (FNY, 'Final Year' ),
+        (PG, 'PG' ),
+    ]
+    block_choices = [
+        ('First Block', 'First Block'),
+        ('Second Block', 'Second Block'),
+        ('Third Block', 'Third Block'),
+        ('Fourth Block', 'Fourth Block'),
+        ('Fifth Block', 'Fifth Block'),
+        ('Seventh Block', 'Seventh Block'),
+        ('Mega Tower 1', 'Mega Tower 1'),
+        ('Mega Tower 2', 'Mega Tower 2'),
+        ('Mega Tower 3', 'Mega Tower 3'),
+        ('GH1', 'GH1'),
+        ('GH3', 'GH3'),
+        ('GH4', 'GH4'),
+        ('GH5', 'GH5'),
+    ]
+    event_choices = [
+        ('Engineer', 'Engineer'),
+        ('Incident', 'Incident'),
+        ('Major Project', 'Major Project'),
+    ]
+    name = models.CharField( verbose_name='Name', max_length=20, blank=False)
+    roll_number = models.CharField(verbose_name='Roll Number', max_length=9, blank=False, unique=True)
+    hostel_block = models.CharField(max_length=30, choices=block_choices, blank=False)
+    batch = models.CharField(verbose_name='Batch', choices=year_choices, max_length=20, default='firstYear')
+    phone_regex = RegexValidator(regex=r'^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$', message="Invalid phone number")
+    phone_number = models.CharField(verbose_name='Phone Number', validators=[phone_regex], max_length=17, blank=False) 
+    event = models.CharField(verbose_name='event', max_length=20, choices=event_choices, blank=True)

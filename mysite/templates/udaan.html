@@ -32,7 +32,7 @@
             <link rel="stylesheet" href={% static 'udaan/assets/css/style.css' %}>
         
     </head>
-  <body >
+  <body onload="document.myform.reset();">
     <!-- Begin #carousel-section -->
     <section id="carousel-section" class="section-global-wrapper"> 
         <div class="container-fluid-kamn" id="carousal-div">
@@ -175,7 +175,34 @@
                     </div>
                 {% endif %}
             {% endfor %}
-        </div>    
+        </div>
+        
+        {% if not is_form_submitted %}            
+        <div >
+            <hr>
+            <form method="POST" id="form" name="myform">{% csrf_token %}                    
+                {% for field in form %}
+                <p>
+                    {{field.label_tag}}{{field}}
+                
+                    {% if field.help_text %}
+                        <small style="color: grey;">{{field.help_text}}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <small style="color: red;">{{error}}</small>
+                    {% endfor %}
+                </p>
+                {% endfor %}
+                <button type="submit">Submit</button>
+            </form>
+            <hr>
+        </div>
+        {% else %}
+        <div>
+            <p>You have successfully registered!</p>
+        </div>
+        {% endif %}
+            
     </section>
 
     
