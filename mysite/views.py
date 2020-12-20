@@ -6,17 +6,13 @@ from .models import *
 
 def index(request):
     full_member_list = Member.objects.all()
-    blog_list = Blog.objects.all()
-    event_list = Event.objects.all()
     art_list = Art.objects.all()
-    art_images = ArtImage.objects.all()
+    art_image = ArtImage.objects.all()
 
     context = {
         'full_member_list': full_member_list,
-        'blog_list': blog_list,
         'art_list': art_list,
-        'event_list': event_list,
-        'art_images': art_images
+        'art_image': art_image
     }
     return render(request, 'index.html', context=context)
 
@@ -34,68 +30,46 @@ def about(request):
 
 
 def blog(request):
-    full_member_list = Member.objects.all()
     blog_list = Blog.objects.all()
-    event_list = Event.objects.all()
     context = {
-        'full_member_list': full_member_list,
-        'blog_list': blog_list,
-        'event_list': event_list
+        'blog_list': blog_list
     }
     return render(request, 'blog.html', context=context)
 
 
 def blog_post(request,pk):
-    full_member_list = Member.objects.all()
     blog_list = Blog.objects.filter(id=pk)
-    event_list = Event.objects.all()
     context = {
-        'full_member_list': full_member_list,
         'blog_list': blog_list,
-        'event_list': event_list
     }
     return render(request, 'blog_post.html', context=context)
 
 
 def events(request):
     event_list = Event.objects.all()
-    event_img = EventImage.objects.all()
+    event_image = EventImage.objects.all()
     context = {
         'event_list': event_list,
-        'event_img': event_img
+        'event_image': event_image
     }
     return render(request, 'events.html', context=context)
 
 
 def udaan(request):
-    full_member_list = Member.objects.all()
-    blog_list = Blog.objects.all()
-    event_list = Event.objects.all()
-    context = {
-        'full_member_list': full_member_list,
-        'blog_list': blog_list,
-        'event_list': event_list
-    }
-    return render(request, 'udaan.html', context=context)
+    return render(request, 'udaan.html')
 
 
 def gallery(request):
-    art_images = ArtImage.objects.all()
-    gallery_img = Gallery.objects.all()
-    event_images = EventImage.objects.all()
+    art_image = ArtImage.objects.all()
+    gallery_image = Gallery.objects.all()
+    event_image = EventImage.objects.all()
     context = {
-        'gallery_img': gallery_img,
-        'art_img': art_images,
-        'event_img': event_images
+        'gallery_image': gallery_image,
+        'art_image': art_image,
+        'event_image': event_image
     }
     return render(request, 'gallery.html', context= context)
 
 
 def contact(request):
-    full_member_list = Member.objects.all()
-    gallery_img = Gallery.objects.all()
-    context = {
-        'full_member_list': full_member_list,
-        'gallery_img': gallery_img
-    }
-    return render(request, 'contact.html', context=context)
+    return render(request, 'contact.html')

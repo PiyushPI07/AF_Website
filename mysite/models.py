@@ -50,9 +50,6 @@ class Blog(models.Model):
     class Meta:
         ordering = ['-created_on']
 
-    def get_absolute_url(self):
-        return reverse('blog_post', args=[str(self.id)])
-
     def __str__(self):
         return self.title
 
