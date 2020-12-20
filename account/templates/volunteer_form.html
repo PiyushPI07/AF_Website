@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<script type="text/javascript">
+    document.getElementById("form").clear()
+</script>
+<body onload="document.FormName.reset();">
+    <div class="container">
+        <form method="POST" id="form" name="FormName" >{% csrf_token %}
+
+            {% for field in form  %}
+                <p>
+                    {{field.label_tag}} {{field}}
+                    {% if field.help_text %}
+                    <small style="color: grey;">{{field.help_text}}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <small style="color: red;">{{error}}</small>
+                    {% endfor %}
+                </p>
+            {% endfor %}
+                <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+{% endblock content %}
+    
