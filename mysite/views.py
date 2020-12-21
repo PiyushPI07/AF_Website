@@ -3,79 +3,49 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from account.forms import VolunteerForm, SandArtRegistrationForm
 from django.views.decorators.cache import cache_control
+from django.shortcuts import get_object_or_404, render
+
 from .models import *
 
 
 def index(request):
     full_member_list = Member.objects.all()
-    image_gallery_full = Image.objects.all()
-    blog_list = Blog.objects.all()
-    event_list = Event.objects.all()
     art_list = Art.objects.all()
-    image_gallery_short = Image.objects.filter(display_on_index=True)
+    art_image = ArtImage.objects.all()
+    event_list = []
     context = {
         'full_member_list': full_member_list,
-        'image_gallery_full': image_gallery_full,
-        'blog_list': blog_list,
         'art_list': art_list,
         'event_list': event_list,
         'image_gallery_short': image_gallery_short,
-        'render_recruitment_form': True
+        'render_recruitment_form': True,
+        'art_image': art_image,
     }
     return render(request, 'index.html', context=context)
 
 
 def about(request):
     full_member_list = Member.objects.all()
-    image_gallery_full = Image.objects.all()
-    blog_list = Blog.objects.all()
-    event_list = Event.objects.all()
-    art_list = Art.objects.all()
-    image_gallery_short = Image.objects.filter(display_on_index=True)
     context = {
-        'full_member_list': full_member_list,
-        'image_gallery_full': image_gallery_full,
-        'art_list': art_list,
-        'blog_list': blog_list,
-        'event_list': event_list,
-        'image_gallery_short': image_gallery_short
+        'full_member_list': full_member_list
     }
     return render(request, 'about.html', context=context)
 
 
 def blog(request):
-    full_member_list = Member.objects.all()
-    image_gallery_full = Image.objects.all()
     blog_list = Blog.objects.all()
-    event_list = Event.objects.all()
-    image_gallery_short = Image.objects.filter(display_on_index=True)
     context = {
-        'full_member_list': full_member_list,
-        'image_gallery_full': image_gallery_full,
-
-        'blog_list': blog_list,
-        'event_list': event_list,
-        'image_gallery_short': image_gallery_short
+        'blog_list': blog_list
     }
     return render(request, 'blog.html', context=context)
 
 
-# Create your views here.
-
-def blog_details(request):
-    full_member_list = Member.objects.all()
-    image_gallery_full = Image.objects.all()
-    blog_list = Blog.objects.all()
-    event_list = Event.objects.all()
-    image_gallery_short = Image.objects.filter(display_on_index=True)
+def blog_post(request,pk):
+    blog_list = Blog.objects.filter(id=pk)
     context = {
-        'full_member_list': full_member_list,
-        'image_gallery_full': image_gallery_full,
         'blog_list': blog_list,
-        'event_list': event_list,
-        'image_gallery_short': image_gallery_short
     }
-    return render(request, 'blog_details.html', context=context)
+    return render(request, 'blog_post.html', context=context)
 
 
 # def udaan(request):
@@ -105,6 +75,14 @@ def udaan_view(request, *args, **kwargs):
         'event_list': events,
         'is_form_submitted': False,
     }
+def events(request):
+    event_list = Event.objects.all()
+    event_image = EventImage.objects.all()
+    context = {
+        'event_list': event_list,
+        'event_image': event_image
+    }
+    return render(request, 'events.html', context=context)
 
     if request.POST:
         form = SandArtRegistrationForm(request.POST)
@@ -118,14 +96,25 @@ def udaan_view(request, *args, **kwargs):
         context['form'] = form
     return render(request, 'udaan.html', context)
 
-def contact(request):
-    image_gallery_full = Image.objects.all()
-    image_gallery_short = Image.objects.filter(display_on_index=True)
+def udaan(request):
+    return render(request, 'udaan.html')
+
+
+def gallery(request):
+    art_image = ArtImage.objects.all()
+    gallery_image = Gallery.objects.all()
+    event_image = EventImage.objects.all()
     context = {
-        'image_gallery_full': image_gallery_full,
-        'image_gallery_short': image_gallery_short,
+        'gallery_image': gallery_image,
+        'art_image': art_image,
+        'event_image': event_image
     }
     return render(request, 'contact.html', context=context)
 def thank_you(request):
     return render(request, 'thank_you.html', context={})
 
+    return render(request, 'gallery.html', context= context)
+
+
+def contact(request):
+    return render(request, 'contact.html')

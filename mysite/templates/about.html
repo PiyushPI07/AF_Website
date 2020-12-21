@@ -1,60 +1,18 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
-{% load static %}
-<main>
-    <!--? Hero Start -->
-     <div class="slider-area ">
-    <div class="slider-active">
-        <!-- Single Slider -->
-        <div class="single-slider slider-height d-flex align-items-center">
+	 {% load static %}
+    <main>
+        <div class="about-details section-padding30">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-8 col-lg-7 col-md-8">
-                        <div class="hero__caption">
-                            <span data-animation="fadeInLeft" data-delay=".1s">Where creativity meets imagination</span>
-                            <h1 data-animation="fadeInLeft" data-delay=".5s" >Artist's Forum</h1>
-                            <p data-animation="fadeInLeft" data-delay=".9s">Mollit anim laborum.Dvcuis aute serunt  iruxvfg dhjkolohr indd re voluptate<br> velit esscillumlore eu quife nrulla parihatur.</p>
-                            <!-- Hero-btn -->
-                            <div class="hero__btn" data-animation="fadeInLeft" data-delay="1.1s">
-                                <a href="../about" class="btn hero-btn">About Us</a>
-                            </div>
+                    <div class="offset-xl-1 col-lg-8">
+                        <div class="about-details-cap mb-50">
+                            <h4>Our Mission</h4>
+                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+                             </p>
+                             <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Single Slider -->
-        <div class="single-slider slider-height d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-8 col-lg-7 col-md-8">
-                        <div class="hero__caption">
-                            <span data-animation="fadeInLeft" data-delay=".1s">Committed to success</span>
-                            <h1 data-animation="fadeInLeft" data-delay=".5s" >We help to grow your business</h1>
-                            <p data-animation="fadeInLeft" data-delay=".9s">Mollit anim laborum.Dvcuis aute serunt  iruxvfg dhjkolohr indd re voluptate<br> velit esscillumlore eu quife nrulla parihatur.</p>
-                            <!-- Hero-btn -->
-                            <div class="hero__btn" data-animation="fadeInLeft" data-delay="1.1s">
-                                <a href="../about" class="btn hero-btn">Artworks</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    <!-- Hero End -->
-    <div class="about-details section-padding30">
-        <div class="container">
-            <div class="row">
-                <div class="offset-xl-1 col-lg-8">
-                    <div class="about-details-cap mb-50">
-                        <h4>Our Mission</h4>
-                        <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
-                         </p>
-                         <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
-                    </div>
 
                     <div class="about-details-cap mb-50">
                         <h4>Our Vision</h4>
@@ -128,36 +86,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Coun Down End --> <div class="team-area section-padding30">
-        <div class="container">
-            <div class="row">
-                <div class="cl-xl-7 col-lg-8 col-md-10">
-                    <!-- Section Tittle -->
-                    <div class="section-tittle mb-70">
-                        <span>Our members </span>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- single Tem -->{% for member in full_member_list %}
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                    <div class="single-team mb-30">
-                        <div class="team-img">
-                            <img src="{{ member.member_img.url }}" alt="">
-                        </div>
-                        <div class="team-caption">
-                            <h3><a href="#">{{ member.member_name }}</a></h3>
-                            <span>{{ member.post }}</span>
-                        </div>
-                    </div>
-                </div>{% endfor %}
+        <!-- Brand Area Start -->
 
-            </div>
-        </div>
-    </div>
-    <!-- Brand Area Start -->
+        <!-- Brand Area End -->
+    </main>
 
-    <!-- Brand Area End -->
-</main>
-{% endblock content %}
+{% endblock %}

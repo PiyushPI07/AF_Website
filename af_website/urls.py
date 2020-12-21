@@ -27,9 +27,11 @@ urlpatterns = [
     path('index/', views.index, name='index1'),
     path('about/', views.about, name='about'),
     path('blog/', views.blog, name='blog'),
-    path('blog_details/', views.blog_details, name='blog_details'),
+    path('blog_post/<int:pk>', views.blog_post, name='blog_post'),
     path('contact/', views.contact, name='contact'),
     path('udaan/', views.udaan_view, name='udaan'),
+    path('gallery/', views.gallery, name='gallery'),
+    path('events/', views.events, name='events'),
     path('udaan/thank_you', views.thank_you, name='thank_you'),
     path('volunteer_registration', volunteer_form_view, name='volunteer_registration')
 ]
