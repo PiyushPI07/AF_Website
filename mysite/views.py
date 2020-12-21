@@ -12,6 +12,7 @@ def index(request):
     full_member_list = Member.objects.all()
     art_list = Art.objects.all()
     art_image = ArtImage.objects.all()
+    image_gallery_short = ''
     event_list = []
     context = {
         'full_member_list': full_member_list,
@@ -75,15 +76,6 @@ def udaan_view(request, *args, **kwargs):
         'event_list': events,
         'is_form_submitted': False,
     }
-def events(request):
-    event_list = Event.objects.all()
-    event_image = EventImage.objects.all()
-    context = {
-        'event_list': event_list,
-        'event_image': event_image
-    }
-    return render(request, 'events.html', context=context)
-
     if request.POST:
         form = SandArtRegistrationForm(request.POST)
         if form.is_valid():
@@ -95,6 +87,15 @@ def events(request):
         form = SandArtRegistrationForm()
         context['form'] = form
     return render(request, 'udaan.html', context)
+def events(request):
+    event_list = Event.objects.all()
+    event_image = EventImage.objects.all()
+    context = {
+        'event_list': event_list,
+        'event_image': event_image
+    }
+    return render(request, 'events.html', context=context)
+
 
 def udaan(request):
     return render(request, 'udaan.html')
