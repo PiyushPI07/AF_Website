@@ -26,9 +26,11 @@ def index(request):
 
 
 def about(request):
-    full_member_list = Member.objects.all()
+    year = datetime.datetime.now().year
+    batches_to_display = [year-1, year-2, year-3, year-4]
+    testimonials = Member.objects.filter(batch__in=batches_to_display).exclude(testimonial=None)
     context = {
-        'full_member_list': full_member_list
+        'testimonials': testimonials,
     }
     return render(request, 'about.html', context=context)
 
@@ -144,7 +146,12 @@ def contact(request):
 
 def team(request):
     members = Member.objects.filter(active=True)
+    year = datetime.datetime.now().year
+    batches_to_display = [year-1, year-2, year-3, year-4]
+    alumni = Member.objects.filter(batch__in=batches_to_display)
     context = {
-        'members': members
+        'members': members,
+        'batches_to_display': batches_to_display,
+        'alumni': alumni
     }
     return render(request, 'team.html', context=context)

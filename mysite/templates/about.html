@@ -14,13 +14,42 @@
         </div><!-- *BreadCrumb Ends here** -->
         <div class="container">
             <div class="main-title pullDown">
-                <h3> Artist Forum NITK </h3>
+                <h3> Artists' Forum NITK </h3>
             </div>
             <p>
                 "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
             </p>
         </div>
-        <hr>
+        <div class="dt-sc-hr-invisible-small"> </div>
+        <div class="main-title"></div> <!--Just for the sake of that fancy line-->
+
+
+        <h2>Testimonials</h2>
+        <div class="container">
+            <section id="primary" class="content-full-width">
+                
+                
+                <div class="dt-sc-one-column column first">
+                    <div class="recent-gallery-container">
+                        <ul class="recent-gallery">
+                            {% for testimonial in testimonials %}
+                            <li>
+                                <blockquote style="margin:40px">
+                                    <span class="fa fa-quote-left fa-3x" style="color: #a81c51;"></span>
+                                    <q>{{testimonial.testimonial}}</q>
+                                    <h6>{{testimonial.member_name}}</h6>
+                                    <a>{{testimonial.post}}</a>                                                                        
+                                </blockquote>
+                            </li>
+                            {% endfor %}
+                        </ul>                           	
+                    </div>
+                </div>
+                    
+        </div>
+        <div class="dt-sc-hr-invisible-small"> </div>
+
+        <div class="main-title"></div>
         <div class="contact-section"><!-- **contact-section Starts Here** -->
             <div id="contact_map" class="animate"  data-animation="fadeInRight" data-delay="100">
                 <iframe width="95%" height="95%" src="https://www.youtube.com/embed/a3yMlb7kCd0" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -41,6 +70,7 @@
             </div>
         </div>
     </div>
+
     
 </div>
 

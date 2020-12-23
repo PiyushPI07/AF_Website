@@ -8,17 +8,20 @@ utc=pytz.UTC
 class Member(models.Model):
     roll_number = models.CharField(max_length=8, primary_key=True)
     member_name = models.CharField(max_length=25)
-    post = models.CharField(max_length=300, blank=True)
+    post = models.CharField(max_length=300, blank=True, help_text='Insert past post names also. ex, <batch> Convener for a past batch convener')
     insta = models.URLField(default=" ")
     email = models.EmailField(max_length = 50,default=" ")
-    linkedin = models.URLField(default=" ")
+    batch = models.CharField(verbose_name='batch', max_length=4, help_text="passing year")
     head = models.BooleanField(default=False)
     testimonial = models.TextField(default=" ")
     member_img = models.ImageField(upload_to='images/members')
     active = models.BooleanField(verbose_name="member status", default=True)
     def __str__(self):
         return self.member_name
-
+    @property
+    def alumni_filter(self):
+        curr_year = datetime.datetime.now().year
+        return self.batch + 4 < curr_year and self.batch < curr_year
 
 class Event(models.Model):
 
