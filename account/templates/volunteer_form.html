@@ -6,6 +6,16 @@
 </script>
 <body onload="document.FormName.reset();">
     <div class="container">
+        <div class="breadcrumb"><!-- *BreadCrumb Starts here** -->
+            <div class="container">
+                <h2>Welcome to <span> Artist Forum Nitk</span></h2>
+                <div class="user-summary">
+                    <div class="account-links">
+                        <a href="{% url 'register' %}">Haven't Registered yet? Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <form method="POST" id="form" name="FormName" >{% csrf_token %}
 
             {% for field in form  %}
@@ -19,7 +29,7 @@
                     {% endfor %}
                 </p>
             {% endfor %}
-                <button type="submit">Submit</button>
+                <button class="dt-sc-button small type2" type="submit">Submit</button>
         </form>
     </div>
 </body>

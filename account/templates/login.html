@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-<div class="container">
-    <div class="header">
-        <h3>Login</h3>
-        <hr>
+<div class="breadcrumb"><!-- *BreadCrumb Starts here** -->
+    <div class="container">
+        <h2>Welcome to <span> Artist Forum Nitk</span></h2>
+        <div class="user-summary">
+            <div class="account-links">
+                <a href="{% url 'register' %}">Haven't Registered yet? Register</a>
+            </div>
+        </div>
     </div>
+</div>
+<div class="container">
     <div class="login-form-div">
         <form action="" method="POST">
             {% csrf_token %}
@@ -25,9 +32,9 @@
                     {%endif%}
                 </p>
             {% endfor %}
-            <button type="submit">Submit</button>
-            <p>Haven't registered yet? <a href="../register">Register</a></p>
-            <p><a href="../password_reset">Forgot Password</a></p>
+            <button class="dt-sc-button small type2" type="submit">Submit</button>
+            <!-- <p>Haven't registered yet? <a href="../register">Register</a></p> -->
+            <p><a href="../password_reset">Forgot Password?</a></p>
         </form>
         <hr>
     </div>

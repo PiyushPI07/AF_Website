@@ -1,217 +1,95 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-<!doctype html>
-<html lang="en">
-    <head>
 
-        <!-- meta data & title -->
-        <meta charset="utf-8">
-        <title>Udaan</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        {% load static %}
-        <style>
-            body{
-                background-image: url({% static 'udaan/assets/img/background/bg.jpg' %}) !important;
-                background-repeat: no-repeat !important;
-                background-attachment: fixed !important;
-                background-size: cover !important;
-            }
-        </style>
-
-
-        <!-- CSS -->
-        {% load static %}
-            <link rel="stylesheet" href={% static 'udaan/assets/css/udaan.css' %} type='text/css'>
-            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
-            <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-            <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-            <link rel="stylesheet" href={% static 'udaan/assets/bootstrap/css/bootstrap.css' %}>
-            <link rel="stylesheet" href={% static 'udaan/assets/css/animate.min.css' %}>
-            <link rel="stylesheet" href={% static 'udaan/assets/css/style.css' %}>
-        
-    </head>
-  <body onload="document.myform.reset();">
-    <!-- Begin #carousel-section -->
-    <section id="carousel-section" class="section-global-wrapper"> 
-        <div class="container-fluid-kamn" id="carousal-div">
-            <div class="row">
-                <div id="carousel-1" class="carousel slide" data-ride="carousel">
-
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators visible-lg">
-                        {% for image in carousel_images %}
-                            {% if forloop.counter == 1 %}
-                                <li data-target="#carousel-"+{{forloop.counter}} data-slide-to={{forloop.counter}} class="active"></li>
-                            {% else %}
-                                <li data-target="#carousel-"+{{forloop.counter}} data-slide-to={{forloop.counter}}></li>
-                            {% endif %}
-                        {% endfor %}
-                    </ol>
-
-                    <!-- Wrapper for slides-->
-                    <div class="carousel-inner" role="listbox">
-                        {% for image in carousel_images %}
-                            {% if forloop.counter == 1 %}
-                                <div class="item active">
-                                    <img src= {{image.img.url}} height="400" alt="Image of first carousel">
-                                    <div class="carousel-caption">
-                                        <h3 class="carousel-title hidden-xs">{{image.img_name}}</h3>
-                                        <p class="carousel-body">RESPONSIVE \ MULTI PAGE</p>
-                                    </div>
-                                </div>
-                            {% else %}
-                                <div class="item">
-                                    <img src={{image.img.url}} height="400" alt="Image of second carousel">
-                                    <div class="carousel-caption">
-                                        <h3 class="carousel-title hidden-xs">{{image.img_name}}</h3>
-                                        <p class="carousel-body">BEAUTIFUL \ CLEAN \ MINIMAL</p>
-                                    </div>
-                                </div>                        
-                            {% endif %}
-                        {% endfor %}
-
-
+    <div id="main">
+        <div class="breadcrumb"><!-- *BreadCrumb Starts here** -->
+            <div class="container">
+                <h2>Udaan<span> NITK's own beach event</span></h2>
+                <div class="user-summary">
+                    <div class="account-links">
+                        <a href="#">Register for Sand Art Competition</a>
                     </div>
-                    {% comment %} <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <!-- Begin Slide 1 -->
-                        <div class="item active">
-                            <img src={% static 'udaan/assets/img/slider/slide2.jpg' %} height="400" alt="Image of first carousel">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">Office BOOTSTRAP TEMPLATE</h3>
-                                <p class="carousel-body">RESPONSIVE \ MULTI PAGE</p>
-                            </div>
-                        </div>
-                        <!-- End Slide 1 -->
-
-                        <!-- Begin Slide 2 -->
-                        <div class="item">
-                            <img src={% static 'udaan/assets/img/slider/slide4.jpg' %} height="400" alt="Image of second carousel">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">EASY TO CUSTOMIZE</h3>
-                                <p class="carousel-body">BEAUTIFUL \ CLEAN \ MINIMAL</p>
-                            </div>
-                        </div>
-                        <!-- End Slide 2 -->
-
-                        <!-- Begin Slide 3 -->
-                        <div class="item">
-                            <img src={% static 'udaan/assets/img/slider/slide2.jpg' %} height="400" alt="Image of third carousel">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">MULTI-PURPOSE TEMPLATE</h3>
-                                <p class="carousel-body">PORTFOLIO \ CORPORATE \ CREATIVE</p>
-                            </div>
-                        </div>
-                        <!-- End Slide 3 -->
-                    </div> {% endcomment %}
-        
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-1" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-1" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End #carousel-section -->
-    <!--Description section starts here-->
-    <section id="description-section">
-        <div id="description-wrapper" >
-            <div id="description-box " class="wow animated zoomIn">
-                <p id="desc-para">{{static.main_description}}</p>
-            </div>
-        </div>
-    </section>
-    <!--Description section ends here-->
-    <!--Events section ends here-->
-    
-    <!--Events section starts here-->
-    <section id="services" class="services-section section-global-wrapper" >
-        <div class="container" >
-            <div class="row " >
-                <div class="services-header " id="attractions">
-                    <h3 class="services-header-title" >Major Events and Attractions</h3><hr>
+        <section id="primary" class="content-full-width">
+            <div class="dt-sc-one-column column first">
+                <div class="recent-gallery-container">
+                    <ul class="recent-gallery">
+                        <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+1" alt="image"/> </li>
+                        <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+2" alt="image"/> </li>
+                        <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+3" alt="image"/> </li>
+                        <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+4" alt="image"/> </li>
+                    </ul>
+                    <div id="bx-pager">
+                        <a href="#" data-slide-index='0'><img src='http://placehold.it/1920x800&text=Service+Thumb+1/000000' alt='image' /></a>
+                        <a href="#" data-slide-index='1'><img src='http://placehold.it/1920x800&text=Service+Thumb+2/000000' alt='image' /></a>
+                        <a href="#" data-slide-index='2'><img src='http://placehold.it/1920x800&text=Service+Thumb+3/000000' alt='image' /></a>
+                        <a href="#" data-slide-index='3'><img src='http://placehold.it/1920x800&text=Service+Thumb+4/000000' alt='image' /></a>
+                    </div>                            	
                 </div>
-            </div>  
+            </div>
+            <div class="dt-sc-hr-invisible-small"> </div>
+            <div class="container">
+                <h2>Major Events and <span>Attractions</span></h2>
+                <div class="dt-sc-hr-invisible-very-small"></div>
+            </div>
+            <div class="container">
+                <div class="service-grid">
+                    {% for event in event_list %}
+                    
+                    {% if forloop.counter|divisibleby:2 %}
+                        <!-- <div class="dt-sc column" style="backdrop-filter: blur(10px);">
+                            <div class="dt-sc-icon-content-wrapper">
+                                <div class="dt-sc-two-third column">
+                                    <div class="dt-sc-ico-content animate" data-animation="fadeInRight" data-delay="100">
+                                        <h6>{{event.event_name}}</h6>
+                                        <p><span>Name:</span>Darren Tiler</p>
+                                        <div class="dt-sc-hr-invisible-very-small"></div>
+                                        <p>{{event.event_description}}</p>
+                                    </div>
+                                </div>
+                                <div class="dt-sc-one-third first column">
+                                    <div><img src="{{event.event_img.url}}" data-animation="fadeInLeft" data-delay="100" alt=""></div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="dt-sc-one-third column first ">
+                            <div class="dt-sc-icon-wraper"><img class="event-img" src="{{event.event_img.url}}" data-animation="fadeInLeft" data-delay="100" alt=""></div>
+                        </div>
+                        <div class="column dt-sc-two-third "  >
+                            <div class="dt-sc-icon-content-wrapper">
+                                <div class="dt-sc-ico-content animate" data-animation="fadeInRight" data-delay="100">
+                                    <h6>{{event.event_name}}</h6>
+                                    <div class="dt-sc-hr-invisible-very-small"></div>
+                                    <p>{{event.event_description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        {% else %}
+                        <div class="column dt-sc-two-third first"  >
+                            <div class="dt-sc-icon-content-wrapper">
+                                <div class="dt-sc-ico-content animate" data-animation="fadeInRight" data-delay="100">
+                                    <h6>{{event.event_name}}</h6>
+                                    <div class="dt-sc-hr-invisible-very-small"></div>
+                                    <p>{{event.event_description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column dt-sc-one-third ">
+                            <div ><img src="{{event.event_img.url}}" data-animation="fadeInLeft" data-delay="100" alt=""></div>
+                        </div>
+                        <hr>
 
-            <!--Events row 1-->  
-            {% for event in event_list %}
-                {% if forloop.counter|divisibleby:2 %}
-                    <div class="row services-row services-row-head services-row-1 justify-content-center"  >
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " >
-                            <div class="services-group wow animated fadeInLeft" data-wow-offset="40" id="event-div">
-                                <div class="row justify-content-center" >
-                                    <div class="col-4 ">
-                                        <img src = {{event.event_img.url}} width="100%" height="100%%"/>
-                                    </div>
-                                    <div class="col-8 ">
-                                        <h4 class="services-title" id="event-name">{{event.event_name}}</h4>
-                                        <p class="services-body">{{event.event_description}}</p>
-                                    </div>                                
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                {% else %}
-                    <div class="row services-row services-row-head services-row-1 justify-content-center"  >
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " >
-                            <div class="services-group wow animated fadeInRight" data-wow-offset="40" id="event-div">
-                                <div class="row justify-content-center">
-                                    <div class="col-8 ">
-                                        <h4 class="services-title" id="event-name">{{event.event_name}}</h4>
-                                        <p class="services-body">{{event.event_description}}</p>
-                                    </div>
-                                    <div class="col-4 ">
-                                        <img src = {{event.event_img.url}} width="100%" height="100%%"/>
-                                    </div>                                
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        
-        {% if not is_form_submitted %}            
-        <div >
-            <hr>
-            <form method="POST" id="form" name="myform">{% csrf_token %}                    
-                {% for field in form %}
-                <p>
-                    {{field.label_tag}}{{field}}
-                
-                    {% if field.help_text %}
-                        <small style="color: grey;">{{field.help_text}}</small>
-                    {% endif %}
-                    {% for error in field.errors %}
-                        <small style="color: red;">{{error}}</small>
-                    {% endfor %}
-                </p>
+                    {% endif %}        
                 {% endfor %}
-                <button type="submit">Submit</button>
-            </form>
-            <hr>
-        </div>
-        {% else %}
-        <div>
-            <p>You have successfully registered!</p>
-        </div>
-        {% endif %}
-            
-    </section>
+                </div>    
+            </div>
 
+
+        </section>
+    </div>
+{% endblock content %}
     
-    <script type="text/javascript" src={% static 'udaan/js/jquery-1.10.2.min.js' %}></script>
-    <script src={% static 'udaan/assets/bootstrap/js/bootstrap.min.js' %}></script>
-    <script src={% static 'udaan/js/wow.min.js' %}></script>
-    <script>
-      new WOW().init();
-    </script>
-  </body>
-</html>
-{% endblock  %}
