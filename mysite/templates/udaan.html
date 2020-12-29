@@ -17,12 +17,22 @@
             <div class="dt-sc-one-column column first">
                 <div class="recent-gallery-container">
                     <ul class="recent-gallery">
+                        
+                        {% for image in carousel_images %}
+                            <li> <img src="{{image.img.url}}" alt="image"/> </li>    
+                        {% endfor %}
+                            
                         <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+1" alt="image"/> </li>
                         <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+2" alt="image"/> </li>
                         <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+3" alt="image"/> </li>
                         <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+4" alt="image"/> </li>
                     </ul>
                     <div id="bx-pager">
+                        
+                        {% for image in carousel_images %}
+                            <a href="#" data-slide-index='0'><img src='{{image.img.url}}' alt='image' /></a>    
+                        {% endfor %}
+                            
                         <a href="#" data-slide-index='0'><img src='http://placehold.it/1920x800&text=Service+Thumb+1/000000' alt='image' /></a>
                         <a href="#" data-slide-index='1'><img src='http://placehold.it/1920x800&text=Service+Thumb+2/000000' alt='image' /></a>
                         <a href="#" data-slide-index='2'><img src='http://placehold.it/1920x800&text=Service+Thumb+3/000000' alt='image' /></a>
