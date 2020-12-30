@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <link href="{% static 'css/animation.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+    <div id="main">
+        <div class="breadcrumb"><!-- *BreadCrumb Starts here** -->
+            <div class="container">
+                <h2>AF<span> Family <i class="fa fa-heart"></i></span></h2>
+            </div>
+        </div>
+    </div>
+    <section id="primary" class="content-full-width">
+        <div class="container">
+            <div class="dt-sc-hr-invisible-small"> </div>
+            <div class="dt-sc-tabs-container">
+                <ul class="dt-sc-tabs-frame">
+                    <li><a href="#" class="current"> Core </a></li>
+                    <li><a href="#"> Executive Members </a></li>
+                    <li><a href="#"> Web Team </a></li>
+                    <li><a href="#"> Alumni </a></li>
+                </ul>
+                <div class="dt-sc-tabs-frame-content">
+                    <div class="service-grid">
+                        
+                        {% for member in members %}
+                        
+                            {% if member.post and member.post != "web team" %}
+                                <div class="dt-sc-one-half column first">
+                                    <div class="dt-sc-icon-content-wrapper">
+                                        <div class="dt-sc-one-half column first">
+                                            <div class="dt-sc-ico-content  fadeRight">
+                                                <h6> {{member.member_name}}</h6>
+                                                <p><span>Post:</span>{{member.post}}</p>
+                                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                                <p>
+                                                    <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
+                                                    <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
+                                                    <a href="{{member.linkedin}}"><i class="fa fa-linkedin fa-2x"></i></a>
+                                                </p>
+                                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                                <p>{{member.testimonial}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="dt-sc-one-half column dt-sc-icon-wrapper">
+                                            <!-- <div class="dt-sc-icon"><i class="fa fa-user-secret animate" data-animation="fadeInLeft" data-delay="100"></i></div> -->
+                                            <img class="fadeRight"  src="{{member.member_img.url}}" style="width: 55%;" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            {% endif %}
+                            
+                            
+                        {% endfor %}
+                            
+                        
+                    </div>
+                </div>
+
+
+
+
+                <div class="dt-sc-tabs-frame-content"> 
+                    <div class="service-grid">
+                        
+                        {% for member in members %}
+                        
+                            {% if not member.post %}
+                                <div class="dt-sc-one-half column first">
+                                    <div class="dt-sc-icon-content-wrapper">
+                                        <div class="dt-sc-one-half column first">
+                                            <div class="dt-sc-ico-content fadeRight">
+                                                <h6> {{member.member_name}}</h6>
+                                                <p><span>Post:</span>{{member.post}}</p>
+                                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                                <p>
+                                                    <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
+                                                    <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
+                                                    <a href="{{member.linkedin}}"><i class="fa fa-linkedin fa-2x"></i></a>
+                                                </p>
+                                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                                <p>{{member.testimonial}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="dt-sc-one-half column dt-sc-icon-wrapper">
+                                            <!-- <div class="dt-sc-icon"><i class="fa fa-user-secret animate" data-animation="fadeInLeft" data-delay="100"></i></div> -->
+                                            <img class= "fadeRight"  src="{{member.member_img.url}}" style="width: 55%;" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            {% endif %}
+                            
+                            
+                        {% endfor %}
+                            
+                        
+                    </div>
+                </div>
+                <div class="dt-sc-tabs-frame-content"> 
+                    <div class="service-grid">
+                        
+                        {% for member in members %}
+                        
+                            {% if member.post == "web team" %}
+                                <div class="dt-sc-one-half column first">
+                                    <div class="dt-sc-icon-content-wrapper">
+                                        <div class="dt-sc-one-half column first">
+                                            <div class="dt-sc-ico-content fadeRight" data-delay="100">
+                                                <h6> {{member.member_name}}</h6>
+                                                <p><span>Post:</span>{{member.post}}</p>
+                                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                                <p>
+                                                    <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
+                                                    <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
+                                                    <a href="{{member.linkedin}}"><i class="fa fa-linkedin fa-2x"></i></a>
+                                                </p>
+                                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                                <p>{{member.testimonial}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="dt-sc-one-half column dt-sc-icon-wrapper">
+                                            <!-- <div class="dt-sc-icon"><i class="fa fa-user-secret animate" data-animation="fadeInLeft" data-delay="100"></i></div> -->
+                                            <img class= "fadeRight"  data-delay="100" src="{{member.member_img.url}}" style="width: 55%;" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            {% endif %}
+                            
+                            
+                        {% endfor %}
+                            
+                        
+                    </div>
+                </div>
+                <div class="dt-sc-tabs-frame-content">
+                    <div class="container">
+                        
+                        <div class="dt-sc-toggle-frame-set">
+                        {% for batch in batches_to_display %}
+                        <div class="dt-sc-toggle-frame">
+                            <h5 class="dt-sc-toggle-accordion"><a href="#">Batch of {{batch}}</a></h5>
+                            <div class="dt-sc-toggle-content">
+                                <div class="block">
+                                    <div class="service-grid">
+                        
+                                        {% for alumnus in alumni %}
+                                        
+                                            {% if alumnus.batch == batch|stringformat:"i" %}
+                                                <div class="dt-sc-one-half column first">
+                                                    <div class="dt-sc-icon-content-wrapper">
+                                                        <div class="dt-sc-one-half column first">
+                                                            <div class="dt-sc-ico-content fadeRight" data-delay="100">
+                                                                <h6> {{member.member_name}}</h6>
+                                                                <p><span>Post:</span>{{member.post}}</p>
+                                                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                                                <p>
+                                                                    <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
+                                                                    <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
+                                                                    <a href="{{member.linkedin}}"><i class="fa fa-linkedin fa-2x"></i></a>
+                                                                </p>
+                                                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                                                <!-- <p>{{member.testimonial}}</p> -->
+                                                            </div>
+                                                        </div>
+                                                        <div class="dt-sc-one-half column dt-sc-icon-wrapper">
+                                                            <img class= "fadeRight"  data-delay="100" src="{{alumnus.member_img.url}}" style="width: 55%;" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            {% endif %}
+                                            
+                                            
+                                        {% endfor %}
+                                            
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            {% endfor %}
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock content %}
+    

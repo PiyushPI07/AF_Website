@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="breadcrumb"><!-- *BreadCrumb Starts here** -->
+    <div class="container">
+        <h2>Welcome to <span> Artists' Forum Nitk</span></h2>
+        <div class="user-summary">
+            <div class="account-links">
+                <a href="{% url 'login' %}">Already Registered? Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="registration-form-div">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% for field in registration_form %}
+                <p>
+                    {{field.label_tag}}
+                    {{field}}
+                    {% if field.help_text %}
+                        <small style="color: grey;">{{field.help_text}}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <small style="color: red;">{{error}}</small>
+                    {% endfor %}
+                </p>
+            {% endfor %}
+            {% for field in recruitment_form %}
+                <p>
+                    
+                    {{field.label_tag}}{{field}}
+                
+                    {% if field.help_text %}
+                        <small style="color: grey;">{{field.help_text}}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <small style="color: red;">{{error}}</small>
+                    {% endfor %}
+                </p>
+            {% endfor %}
+            <button class="dt-sc-button small type2" type="submit">Submit</button>
+            <!-- <p>Already registered? <a href="../login">Login</a></p> -->
+        </form>
+        <hr>
+    </div>
+</div>
+
+
+
+{% endblock %}
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% for field in registration_form %}
+            <p>
+                {{field.label_tag}}
+                {{field}}
+                {% if field.help_text %}
+                    <small style="color: grey;">{{field.help_text}}</small>
+                {% endif %}
+                {% for error in field.errors %}
+                    <small style="color: red;">{{error}}</small>
+                {% endfor %}
+            </p>
+        {% endfor %}
+        {% for field in recruitment_form %}
+            <p>
+                {{field.label_tag}}
+                {{field}}
+                {% if field.help_text %}
+                    <small style="color: grey;">{{field.help_text}}</small>
+                {% endif %}
+                {% for error in field.errors %}
+                    <small style="color: red;">{{error}}</small>
+                {% endfor %}
+            </p>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html> -->

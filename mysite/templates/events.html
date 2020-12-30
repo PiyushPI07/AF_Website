@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main">
+    <div class="container">
+        <div class="breadcrumb"><!-- *BreadCrumb Starts here** -->
+            <div class="container">
+                <h2>Our <span>Events</span></h2>
+                <!-- <div class="user-summary">
+                    <div class="account-links">
+                        <a href="#">Register for Sand Art Competition</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <section>
+
+            <h3>Upcoming Events</h3>
+            <img src="{% static 'images/title-line.png' %}" alt="">
+            <div class="dt-sc-hr-invisible-very-small"></div>
+            
+            <div class="service-grid">
+                
+                {% for event in event_list %}
+                    
+                    {% if not event.is_past %}
+                        
+                    <div class="dt-sc-one-half column first" style="margin-left: 9px;"> 
+                        <div class="dt-sc-icon-content-wrapper">
+                            <div class="dt-sc-ico-content animate" data-animation="fadeInRight" data-delay="100">
+                                <div class="recent-gallery-container">
+                                    <ul class="recent-gallery">                                       
+                                        {% for image in event_images %}                                           
+                                            {% if image.title.title == event.title %}
+                                                <li> <img src="{{image.img.url}}" alt="image"/> </li>        
+                                            {% endif %}                                               
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                <h5>{{event.title}}</h5>
+                                <p><span>Date:</span>{{event.date|date:"D, d M Y"}}</p>
+                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                <p>{{event.description}} <a href="{{event.resources}}">more</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                        
+                {% endfor %}
+                
+            </div>
+        </section>
+        <section>
+
+            <h3>Past Events</h3>
+            <img src="{% static 'images/title-line.png' %}" alt="">
+            <div class="dt-sc-hr-invisible-very-small"></div>
+    
+            <div class="service-grid">
+                {% for event in event_list %}
+                    
+                    {% if event.is_past %}
+                        
+                    <div class="dt-sc-one-half column first" style="margin-left: 9px;"> 
+                        <div class="dt-sc-icon-content-wrapper">
+                            <div class="dt-sc-ico-content animate" data-animation="fadeInRight" data-delay="100">
+                                <div class="recent-gallery-container">
+                                    <ul class="recent-gallery">                                       
+                                        {% for image in event_images %}                                           
+                                            {% if image.title.title == event.title %}
+                                                <li> <img src="{{image.img.url}}" alt="image"/> </li>        
+                                            {% endif %}                                               
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                <h5>{{event.title}}</h5>
+                                <p><span>Date:</span>{{event.date|date:"D, d M Y"}}</p>
+                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                <p>{{event.description}} <a href="{{event.resources}}">more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                        
+                {% endfor %}
+                
+            </div>
+        </section>
+
+
+
+       <!-- <section id="primary" class="content-full-width">
+           <div class="container">
+               <div class="service-grid">
+                   <div class="dt-sc-icon-content-wrapper">
+                        <div class="dt-sc-one-half column first">
+                            <div class="dt-sc-ico-content animate" data-animation="fadeInRight" data-delay="100">
+                                <h6>About Me</h6>
+                                <p><span>Name:</span>Darren Tiler</p>
+                                <p><span>Age:</span>40</p>
+                                <p><span>Location:</span>New York / USA</p>
+                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                <p>Lorem ipsum dolor sit amet elit elit elit elit, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+       </section>  -->
+    </div>
+</div>
+    
+{% endblock content %}
+    

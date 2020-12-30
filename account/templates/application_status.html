@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container">
+    <div class="breadcrumb"><!-- *BreadCrumb Starts here** -->
+        <div class="container">
+            
+            {% if request.user.is_authenticated %}
+                
+            <h2>Welcome <span> {{request.user.username}}</span></h2>
+            <div class="user-summary">
+                <div class="account-links">
+                    <a href="{% url 'logout' %}">Logout</a>
+                </div>
+            </div>
+            {% else %}
+            <h2>You have not <span>Registered!</span></h2>
+            <div class="user-summary">
+                <div class="account-links">
+                    <a href="{% url 'register' %}">Register</a>
+                </div>
+            </div>
+            {% endif %}
+                
+        </div>
+    </div>
+    {%if request.user.is_authenticated%}
+    <div class="container">
+        <!-- <h2>Welcome {{request.user.username}}</h2> -->
+        <p>Thank you for applying for Artists' Forum NITK recruitments. You can find your profile details along with your application status below.</p>
+        <hr>
+    </div>
+    <div>
+        <h5>Applicant Name:     {{applicant.name}}</h5>
+        <h5>Roll Number:        {{applicant.roll_number}}</h5>
+        <h5>Application Status: {{applicant.status}}</h5>
+        <hr>    
+    </div>
+    {% else %}
+        <p><a href="{%url 'register'%}">Register</a> | <a href="{%url 'login'%}">Login</a> </p>
+    {%endif%}
+</div>
+{% endblock %}
