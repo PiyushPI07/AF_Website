@@ -1,94 +1,77 @@
 {% extends "base.html" %}
 
 {% block content %}
-	 {% load static %}
-    <main>
-        <div class="about-details section-padding30">
+{% load static %}
+
+<div id="main">
+    <div class="container">
+        <div class="breadcrumb"><!-- *BreadCrumb Starts here** -->
             <div class="container">
-                <div class="row">
-                    <div class="offset-xl-1 col-lg-8">
-                        <div class="about-details-cap mb-50">
-                            <h4>Our Mission</h4>
-                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
-                             </p>
-                             <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
-                        </div>
+                <h2>About <span>Us</span></h2>
+                <div class="user-summary">
+                </div>
+            </div>
+        </div><!-- *BreadCrumb Ends here** -->
+        <div class="container">
+            <div class="main-title pullDown">
+                <h3> Artists' Forum NITK </h3>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac. Eu non diam phasellus vestibulum lorem sed risus ultricies tristique. Quis enim lobortis scelerisque fermentum dui faucibus. Augue ut lectus arcu bibendum at varius vel pharetra. Risus nec feugiat in fermentum posuere urna nec tincidunt. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Feugiat in fermentum posuere urna nec tincidunt praesent semper. Condimentum vitae sapien pellentesque habitant. Lectus mauris ultrices eros in cursus turpis. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Scelerisque varius morbi enim nunc faucibus a. Maecenas volutpat blandit aliquam etiam erat velit. Arcu risus quis varius quam. Ut porttitor leo a diam sollicitudin tempor id. Elementum nibh tellus molestie nunc non blandit massa enim. Nunc faucibus a pellentesque sit.
+            </p>
+        </div>
+        <div class="dt-sc-hr-invisible-small"> </div>
+        <div class="main-title"></div> <!--Just for the sake of that fancy line-->
 
-                    <div class="about-details-cap mb-50">
-                        <h4>Our Vision</h4>
-                        <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
-                         </p>
-                         <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
+
+        <h2>Testimonials</h2>
+        <div class="container">
+            <section id="primary" class="content-full-width">
+                
+                
+                <div class="dt-sc-one-column column first">
+                    <div class="recent-gallery-container">
+                        <ul class="recent-gallery">
+                            {% for testimonial in testimonials %}
+                            <li>
+                                <blockquote style="margin:40px">
+                                    <span class="fa fa-quote-left fa-3x" style="color: #a81c51;"></span>
+                                    <q>{{testimonial.testimonial}}</q>
+                                    <h6>{{testimonial.member_name}}</h6>
+                                    <a>{{testimonial.post}}</a>                                                                        
+                                </blockquote>
+                            </li>
+                            {% endfor %}
+                        </ul>                           	
                     </div>
                 </div>
+                    
+        </div>
+        <div class="dt-sc-hr-invisible-small"> </div>
+
+        <div class="main-title"></div>
+        <div class="contact-section"><!-- **contact-section Starts Here** -->
+            <div id="contact_map" class="animate"  data-animation="fadeInRight" data-delay="100">
+                <iframe width="95%" height="95%" src="https://www.youtube.com/embed/a3yMlb7kCd0" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id="contact_us" class="dt-sc-contact-info animate" data-animation="fadeInLeft" data-delay="100">
+                <h3>Reach us at</h3>
+                <div class="dt-sc-contact-details"><span class="fa fa-map-marker"></span>Address: National Institute of Technology, Karnataka, India </div>
+                <div class="dt-sc-contact-details"><span class="fa fa-tablet"></span> Phone: +91 91603 61774 </div>
+                <div class="dt-sc-contact-details"><span class="fa fa-envelope"></span> Email: <a href="mailto:nitkartistforum@gmail.com">nitkartistforum@gmail.com</a> </div>
+                <div class="dt-sc-contact-details"><span class="fa fa-globe"></span> Web: <a href="http://wedesignthemes.com">http:afnitk.com</a> </div>
+                <ul class="type3 dt-sc-social-icons">
+                    <li class="dribbble"><a href="https://www.instagram.com/afnitk/?hl=en"> <i class="fa fa-instagram"></i> </a></li>
+                    <li class="facebook"><a href="https://www.facebook.com/afnitk"> <i class="fa fa-facebook"></i> </a></li>
+                    <li class="google"><a href="mailto: nitkartistforum@gmail.com"> <i class="fa fa-envelope"></i> </a></li>
+                    <li class="pinterest"><a href="https://www.youtube.com/channel/UClWe6xpgRAJTfNk302cSPOA"> <i class="fa fa-youtube"></i> </a></li>
+
+                </ul>                        
             </div>
         </div>
     </div>
-    <!--? About Area Start-->
-    <div class="support-company-area pt-100 pb-100 section-bg fix" data-background="{% static 'assets/img/gallery/section_bg02.jpg' %}">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="support-location-img">
-<iframe width="580" height="360" src="https://www.youtube.com/embed/gDqj38OCanQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6">
-                    <div class="right-caption">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle2 mb-50">
-                            <span>Our Tribute</span>
-                            <h2>AF Batch of 2018</h2>
-                        </div>
-                        <div class="support-caption">
-                            <p class="pera-top">Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess cillum dolore egru lofrre dsu quality mollit anim laborumuis au dolor in voluptate velit cillu.</p>
-                            <p class="mb-65">Mollit anim laborum.Dvcuis aute serunt  iruxvfg dhjkolohr indd re voluptate velit esscillumlore eu quife nrulla parihatur. Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg dhjinulpadeserunt moll.</p>
 
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Coun Down Start -->
-    <div class="count-down-area pb-120">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <!-- Counter Up -->
-                    <div class="single-counter text-center">
-                        <span class="counter">5</span>
-                        <p>Major Projects Completed</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <!-- Counter Up -->
-                    <div class="single-counter active text-center">
-                        <span class="counter">480</span>
-                        <p> Active Years</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <!-- Counter Up -->
-                    <div class="single-counter text-center">
-                        <span class="counter">626</span>
-                        <p>Cups of Coffee</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <!-- Counter Up -->
-                    <div class="single-counter text-center">
-                        <span class="counter">95</span>
-                        <p>Happy Student Members</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Brand Area Start -->
-
-        <!-- Brand Area End -->
-    </main>
+    
+</div>
 
 {% endblock %}

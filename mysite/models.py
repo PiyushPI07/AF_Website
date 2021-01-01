@@ -1,36 +1,65 @@
 from django.db import models
 from django.urls import reverse
-
+import datetime
+from django.utils import timezone
+import pytz
+utc=pytz.UTC
 
 class Member(models.Model):
     roll_number = models.CharField(max_length=8, primary_key=True)
     member_name = models.CharField(max_length=25)
-    post = models.CharField(max_length=300)
+    post = models.CharField(max_length=300, blank=True, help_text='Insert past post names also. ex, <batch> Convener for a past batch convener')
     insta = models.URLField(default=" ")
     email = models.EmailField(max_length = 50,default=" ")
-    linkedin = models.URLField(default=" ")
+    batch = models.CharField(verbose_name='batch', max_length=4, help_text="passing year")
     head = models.BooleanField(default=False)
     testimonial = models.TextField(default=" ")
     member_img = models.ImageField(upload_to='images/members')
-
+    active = models.BooleanField(verbose_name="member status", default=True)
     def __str__(self):
         return self.member_name
-
+    @property
+    def alumni_filter(self):
+        curr_year = datetime.datetime.now().year
+        return self.batch + 4 < curr_year and self.batch < curr_year
 
 class Event(models.Model):
+
     title = models.CharField(max_length=50)
     description = models.TextField(default=" ")
-    created_on = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField(auto_now_add=False, default=timezone.now())
+    resources = models.CharField(verbose_name='Event Resources', max_length=100, blank=True)
+    @property
+    def is_past(self):
+        utc_date = utc.localize(datetime.datetime.now())
+        return utc_date < self.date
 
     def __str__(self):
         return self.title
 
 
 class Art(models.Model):
+    SKT = 'Sketches'
+    DDL = 'Doodles'
+    ABS = 'Abstract'
+    PRT = 'Portrait'
+    NTR = 'Nature'
+    DGT = 'Digital'
+    OTR = 'Other'
+    art_choices = [
+        (SKT, 'Sketches'),
+        (DDL, 'Doodles'),
+        (ABS, 'Abstract'),
+        (PRT, 'Portrait'),
+        (NTR, 'Nature'),
+        (DGT, 'Digital'),
+        (OTR, 'Other')
+    ]
+    art_image = models.ImageField(upload_to='images/art')
     title = models.CharField(max_length=20)
     author = models.ForeignKey(Member, on_delete=models.CASCADE, related_name='art_posts')
     created_on = models.DateTimeField(auto_now_add=True)
-
+    art_type = models.CharField(verbose_name='Type', max_length=20, choices=art_choices)
     class Meta:
         ordering = ['-created_on']
 
@@ -59,17 +88,9 @@ class EventImage(models.Model):
     title = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='event_posts')
 
     def __str__(self):
-        return self.title
+        return self.title.title
 
 
-class ArtImage(models.Model):
-    art_image = models.ImageField(upload_to='images/art')
-    title = models.ForeignKey(Art, on_delete=models.CASCADE, related_name='art_posts')
-
-    def __str__(self):
-        return self.title
-
-# Create your models here.
 #Udaan model
 class Udaan_static(models.Model):
     main_description= models.TextField()
@@ -101,3 +122,18 @@ class Gallery(models.Model):
 
     class Meta:
         ordering = ['-created_on']
+
+class Comment(models.Model):
+    post = models.ForeignKey(to=Blog, on_delete=models.CASCADE, related_name='post_comment')
+    author = models.CharField(verbose_name='author', max_length=30, blank=False)
+    body = models.TextField(verbose_name='Post Comment')
+    email = models.EmailField(verbose_name='email')
+    created_on = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Comment'
+        verbose_name_plural = 'Comments'
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.body

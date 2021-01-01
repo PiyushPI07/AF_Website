@@ -2,13 +2,18 @@
 <html lang="en">
 {% extends 'base.html' %}
 {% block content %}
-
-<div class="container">
-    <div class="header">
-        <h3>Welcome to Artist Forum NITK</h3>
-        <p>Please register below to apply for ongoing recruitments.</p>
-        <hr>
+{% load static %}
+<div class="breadcrumb"><!-- *BreadCrumb Starts here** -->
+    <div class="container">
+        <h2>Welcome to <span> Artists' Forum Nitk</span></h2>
+        <div class="user-summary">
+            <div class="account-links">
+                <a href="{% url 'login' %}">Already Registered? Login</a>
+            </div>
+        </div>
     </div>
+</div>
+<div class="container">
     <div class="registration-form-div">
         <form action="" method="POST">
             {% csrf_token %}
@@ -37,8 +42,8 @@
                     {% endfor %}
                 </p>
             {% endfor %}
-            <button class="submit-button" type="submit">Submit</button>
-            <p>Already registered? <a href="../login">Login</a></p>
+            <button class="dt-sc-button small type2" type="submit">Submit</button>
+            <!-- <p>Already registered? <a href="../login">Login</a></p> -->
         </form>
         <hr>
     </div>

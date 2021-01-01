@@ -32,6 +32,7 @@ urlpatterns = [
     path('udaan/', views.udaan_view, name='udaan'),
     path('gallery/', views.gallery, name='gallery'),
     path('events/', views.events, name='events'),
+    path('team/', views.team, name = 'team'),
     path('udaan/thank_you', views.thank_you, name='thank_you'),
     path('volunteer_registration', volunteer_form_view, name='volunteer_registration')
 ]

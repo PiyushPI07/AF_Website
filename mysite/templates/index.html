@@ -1,224 +1,65 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load static %}
-<main>
 
-    <!--? About Area Start-->
-    <div class="support-company-area pt-100 pb-100 section-bg fix" data-background="{% static 'assets/img/gallery/section_bg02.jpg' %}">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="support-location-img">
-                        <img src="{% static 'assets/img/gallery/about.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6">
-                    <div class="right-caption">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle2 mb-50">
-                            <span>Our Top Services</span>
-                            <h2>Our Best Services</h2>
-                        </div>
-                        <div class="support-caption">
-                            <p class="pera-top">Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess cillum dolore egru lofrre dsu quality mollit anim laborumuis au dolor in voluptate velit cillu.</p>
-                            <p class="mb-65">Mollit anim laborum.Dvcuis aute serunt  iruxvfg dhjkolohr indd re voluptate velit esscillumlore eu quife nrulla parihatur. Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg dhjinulpadeserunt moll.</p>
-                            <a href="../about" class="btn post-btn">More About Us</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- About Area End-->
-    <!--? Services Ara Start -->
-    <div class="services-area section-padding3">
-        <div class="container">
-            <div class="row">
-                <div class="cl-xl-7 col-lg-8 col-md-10">
-                    <!-- Section Tittle -->
-                    <div class="section-tittle mb-70">
-                        <span>Our Artworks</span>
-                        <h2>Featured Works</h2>
-                    </div>
+{% block content %}
+    
+<div class="slider-container">
+    <div class="slider fullwidth-section parallax" style="background: url({% static 'images/bg-trial.jpg' %});"></div>  <!--background image goes here-->
+</div>
+<div id="main">
+    <section id="primary" class="content-full-width"> <!-- **Primary Starts Here** -->  
+                      
+        <div class="dt-sc-hr-invisible-small"></div>
+        
+        <div class="fullwidth-section"> <!-- **Full-width-section Starts Here** -->
+            <div class="container">
+                <div class="main-title animate" data-animation="pullDown" data-delay="100">
+                    <h2 class="aligncenter"> Art Gallery </h2>
+                    <p> Some amazing artworks by Artist Forum members </p>
                 </div>
             </div>
-            <div class="row">
-                      {% for art in art_list %}
-                <div class="col-lg-6 col-md-6 col-sm-10">
-                    <div class="single-services mb-100">
-                        <div class="services-img">
-                            <img src="{{ art.art_img.url }}"  alt="">
-                            </div>
-                            <div class="services-caption">
-                            <span>{{ art.author }}</span>
-                            <p>{{ art.created_on }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
+            <div class="dt-sc-sorting-container">
+                <a data-filter="*" href="#" title = "" class="dt-sc-tooltip-top active-sort type1 dt-sc-button animate" data-animation="fadeIn" data-delay="100">All</a>
+                <a data-filter=".Sketches" href="#" title = "" class="dt-sc-tooltip-top type1 dt-sc-button animate" data-animation="fadeIn" data-delay="200">Sketches</a>
+                <a data-filter=".Portrait" href="#" title = "" class="dt-sc-tooltip-top type1 dt-sc-button animate" data-animation="fadeIn" data-delay="500">Portraits</a>
+                <a data-filter=".Doodles" href="#" title = "" class="dt-sc-tooltip-top type1 dt-sc-button animate" data-animation="fadeIn" data-delay="300">Doodles</a>
+                <a data-filter=".Digital" href="#" title = "" class="dt-sc-tooltip-top type1 dt-sc-button animate" data-animation="fadeIn" data-delay="400">Digital</a>
+                <a data-filter=".Nature" href="#" title = "" class="dt-sc-tooltip-top type1 dt-sc-button animate" data-animation="fadeIn" data-delay="400">Nature</a>
+                <a data-filter=".Abstract" href="#" title = "" class="dt-sc-tooltip-top type1 dt-sc-button animate" data-animation="fadeIn" data-delay="400">Abstract</a>
+                <a data-filter=".Other" href="#" title = "" class="dt-sc-tooltip-top type1 dt-sc-button animate" data-animation="fadeIn" data-delay="400">Others</a>
             </div>
-        </div>
-    </div>
-    <!-- Services Ara End -->
-    <!--? Testimonial Start -->
-    <div class="testimonial-area testimonial-padding" data-background="{% static 'assets/img/gallery/section_bg04.jpg' %}">
-        <div class="container ">
-            <div class="row d-flex justify-content-center">
-
-                <div class="col-xl-10 col-lg-10 col-md-9">
-                    <div class="h1-testimonial-active">
-                        <!-- Single Testimonial --> {% for member in full_member_list %}
-
-                        <div class="single-testimonial text-center">
-                            <!-- Testimonial Content -->
-                            <div class="testimonial-caption ">
-                                <div class="testimonial-top-cap">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="67px" height="49px">
-                                    <path fill-rule="evenodd"  fill="rgb(240, 78, 60)"
-                                    d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"/>
-                                    </svg>
-                                    <p>{{ member.testimonial }}</p>
-                                </div>
-                                <!-- founder -->
-                                <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                                    <div class="founder-img">
-                                       <img src="{% static 'assets/img/gallery/Homepage_testi.png' %}" alt="">
+            <div class="portfolio-fullwidth blur" style="background-image: url({% static 'images/texture.jpg' %});">
+                <span class="blur2"><b></b></span>
+                <div class="portfolio-grid" >
+                    <div class="dt-sc-portfolio-container isotope"> <!-- **dt-sc-portfolio-container Starts Here** -->
+                        
+                        
+                        
+                        {% for art in art_list %}
+                        <div class="portfolio {{art.art_type}} dt-sc-one-fourth">
+                            <figure>
+                                <img src="{{art.art_image.url}}" alt="art_image" style="padding: 8%;" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]" href="{{art.art_image.url}}"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a>{{art.title}}</a></h5>
+                                            <p> <a href="{{art.author.insta}}">  by {{art.author}} </a></p>
+                                        </div>
                                     </div>
-                                    <div class="founder-text">
-                                        <span>{{ member.member_name }}</span>
-                                        <p>{{ member.post }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>{% endfor %}
-                        <!-- Single Testimonial -->
-                        <div class="single-testimonial text-center">
-                            <!-- Testimonial Content -->
-                            <div class="testimonial-caption ">
-                                <div class="testimonial-top-cap">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="67px" height="49px">
-                                    <path fill-rule="evenodd"  fill="rgb(240, 78, 60)"
-                                    d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"/>
-                                    </svg>
-                                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas. </p>
-                                </div>
-                                <!-- founder -->
-                                <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                                    <div class="founder-img">
-                                        <img src="{% static 'assets/img/gallery/Homepage_testi.png' %}" alt="">
-                                    </div>
-                                    <div class="founder-text">
-                                        <span>Jessya Inn</span>
-                                        <p>Chif Photographer</p>
-                                    </div>
-                                </div>
-                            </div>
+                                </figcaption>
+                            </figure>
                         </div>
-                    </div>
+                            
+                        {% endfor %}
+                            
+                    </div><!-- **dt-sc-portfolio-container Ends Here** -->
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Testimonial End -->
-    <!-- Coun Down End -->
-    <!-- Team Start -->
-    <div class="team-area section-padding30">
-        <div class="container">
-            <div class="row">
-                <div class="cl-xl-7 col-lg-8 col-md-10">
-                    <!-- Section Tittle -->
-                    <div class="section-tittle mb-70">
-                        <span>AF Fun </span>
-                        <h2>Our Team Members</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- single Tem -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                    <div class="single-team mb-30">
-                        <div class="team-img">
-                            <img src="{% static 'assets/img/gallery/team2.png' %}" alt="">
-                        </div>
-                        <div class="team-caption">
-                            <h3><a href="#">Ethan Welch</a></h3>
-                            <span>UX Designer</span>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-    <!-- Want To work -->
-    <section class="wantToWork-area w-padding2 section-bg" data-background="{% static 'assets/img/gallery/section_bg03.jpg' %}">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-xl-7 col-lg-9 col-md-8">
-                    <div class="wantToWork-caption wantToWork-caption2">
-                        <h2>Where Creativity Meets Imagination ...<br></h2>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-4">
-                    <a href="../gallery" class="btn btn-black f-right">Gallery</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Want To work End -->
-    <!-- Blog Area Start -->
-    <div class="home-blog-area section-padding30">
-        <div class="container">
-            <!-- Section Tittle -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-tittle mb-100">
-                        <span>Our Events</span>
-
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                {% for event in events_list %}
-                <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="home-blog-single mb-30">
-                        <div class="blog-img-cap">
-                            <div class="blog-img">
-                                <img src="{{ event.bg_img.url }}" alt="">
-                                <ul>
-                                    <li>{{ event.small_text }}</li>
-                                </ul>
-                            </div>
-                            <div class="blog-cap">
-                                <h3><a href="../blog_details"></a></h3>
-                                <p>{{ event.created_on }}</p>
-                                <a href="blog_post.html" class="more-btn">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    <!-- Blog Area End -->
-    <!-- Brand Area Start -->
-    <div class="brand-area pb-140">
-        <div class="container">
-            <div class="brand-active brand-border pb-40">
-                <div class="single-brand">
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Brand Area End -->
-</main>
-{% endblock %}
+        <div class="clear"></div>
+</div>
+{% endblock content %}
+    
