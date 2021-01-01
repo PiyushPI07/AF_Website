@@ -27,6 +27,16 @@ DEBUG = True
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+else:
+    #enable 2 step verification in gmail settings for the corrosponding email account, ie <artistforum@gmail.com>
+    #click on app password, Create an app password which will be used in this backend to send password reset emails.
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = 'artistforum@gmail.com'
+    EMAIL_HOST_PASSWORD = 'password goes here'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    DEFAULT_FROM_EMAIL = 'Artists Forum NITK <noreply@artistforum>'
 
 ALLOWED_HOSTS = []
 
@@ -125,8 +135,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+
