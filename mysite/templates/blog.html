@@ -20,28 +20,28 @@
             <div class="blog-items apply-isotope clear">
                     
                 {% for blogpost in blog_list %}
+                <a href="{% url 'blog_post' blogpost.id %}">
                 <div class="dt-sc-one-third column">
                     <article class="blog-entry bigEntrance" data-animation="bigEntrance">
                         <div class="entry-thumb">
-                            <a href="#"><img src="{{blogpost.blog_img.url}}" alt="" title=""></a>
+                            <img src="{{blogpost.blog_img.url}}" alt="" title="">
                         </div>
                         <div class="entry-details">
                             <div class="entry-title">
-                                <h4> <a href="{% url 'blog_post' blogpost.id %}">{{blogpost.title}}</a> </h4>
+                                <h4>{{blogpost.title}}</h4>
                             </div>
                             <div class="entry-metadata">
-                                <p class="author"> <i class="fa fa-user"></i> By:  <a href="{{blogpost.author.insta}}" title="ram"> {{blogpost.author}} </a> </p>
+                                <p class="author"> <i class="fa fa-user"></i> By: {{blogpost.author}} </p>
                                 <p><i class="fa fa-calendar"></i>{{ blogpost.created_on|date:"D, d M Y" }}</p>
-                                <!-- <p class="tags"><i class="fa fa-tags"> </i><a href="#" rel="tag"> Creative</a></p> -->
-                                <!-- <p class="categories"><i class="fa fa-folder-open"> </i><a href="#"> Blog</a></p> -->
                                 <p><i class="fa fa-comments"></i>14</p>
                             </div>
                             <div class="entry-body">
                                 <p style="text-align: justify;">{{blogpost.content|truncatechars:100}}</p>
                             </div>
                         </div>
-                    </article>
+                </article>
                 </div>
+                </a>
                     
                 {% endfor %}
             </div>

@@ -29,7 +29,7 @@
                             </div>
                             <div class="entry-metadata">
                                     <p class="date"> <i class="fa fa-calendar"></i>{{ blog.created_on|date:"D, d M Y" }}</p>
-                                    <p class="author"> <i class="fa fa-user"></i> By :  <a title="Author" href="#"> {{blog.author}} </a> </p>
+                                    <p class="author"> <i class="fa fa-user"></i> By :  <a title="Author" href="{{blog.author.insta}}"> {{blog.author}} </a> </p>
                                     <!-- <p class="tags"><i class="fa fa-tags"> </i><a rel="tag" href="#"> Creative</a></p> -->
                                     <p class="categories"><i class="fa fa-folder-open"> </i><a href="#">{{blog.catogory}}</a></p>
                                     <!-- <p><a href="#"><i class="fa fa-comments"></i>4</a></p> -->
@@ -43,7 +43,7 @@
                     
                     <div class="post-author-details"><!-- **post-author-details starts Here** -->
                         <div class="author-desc">
-                            <p><span class="fa fa-bullhorn"></span> {{blog.author}} <br> Artists' Forum, National Institute of Technology Karnataka</p>
+                            <p><span class="fa fa-bullhorn"></span> <a href="{{blog.author.insta}}" title="author"> {{blog.author}} </a> <br> Artists' Forum, National Institute of Technology Karnataka</p>
                         </div>
                         <div class="author-metadata">
                             <p><span class="fa fa-eye"></span><a href="#"> 48 </a></p>

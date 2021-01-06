@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="main-title animate" data-animation="pullDown" data-delay="100">
                     <h2 class="aligncenter"> Art Gallery </h2>
-                    <p> Some amazing artworks by Artist Forum members </p>
+                    <p> Some amazing artworks by Artists' Forum members </p>
                 </div>
             </div>
             <div class="dt-sc-sorting-container">
@@ -37,20 +37,22 @@
                         
                         {% for art in art_list %}
                         <div class="portfolio {{art.art_type}} dt-sc-one-fourth">
+                            <a data-gal="prettyPhoto[gallery]" href="{{art.art_image.url}}">
                             <figure>
-                                <img src="{{art.art_image.url}}" alt="art_image" style="padding: 8%;" title="">
+                                <img src="{{art.art_image.url}}" style="padding: 8%;" title="">
                                 <figcaption>
                                     <div class="portfolio-detail">
                                         <div class="views">
-                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]" href="{{art.art_image.url}}"></a><span>3</span>
+                                            <div class="fa fa-camera-retro" style="margin-right: 1em;"></div><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a>{{art.title}}</a></h5>
-                                            <p> <a href="{{art.author.insta}}">  by {{art.author}} </a></p>
+                                            <h5>{{art.title}}</h5>
+                                            <p> by {{art.author}}</p>
                                         </div>
                                     </div>
                                 </figcaption>
                             </figure>
+                            </a>
                         </div>
                             
                         {% endfor %}
