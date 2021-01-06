@@ -28,7 +28,7 @@ def index(request):
 def about(request):
     year = datetime.datetime.now().year
     batches_to_display = [year-1, year-2, year-3, year-4]
-    testimonials = Member.objects.filter(batch__in=batches_to_display).exclude(testimonial=None)
+    testimonials = Member.objects.filter(batch__in=batches_to_display).exclude(testimonial='')
     context = {
         'testimonials': testimonials,
     }
