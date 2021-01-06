@@ -47,6 +47,7 @@ class Art(models.Model):
     SKT = 'Sketches'
     DDL = 'Doodles'
     ABS = 'Abstract'
+    ANIM = 'Anime'
     PRT = 'Portrait'
     NTR = 'Nature'
     DGT = 'Digital'
@@ -54,6 +55,7 @@ class Art(models.Model):
     art_choices = [
         (SKT, 'Sketches'),
         (DDL, 'Doodles'),
+        (ANIM, 'Anime'),
         (ABS, 'Abstract'),
         (PRT, 'Portrait'),
         (NTR, 'Nature'),
