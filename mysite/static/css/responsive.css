@@ -880,7 +880,7 @@
 	/*----*****---- << Menu Type-2 >> ----*****----*/	
 	
 	.menu-container { width: 300px; }
-	.logo { width: 50%; padding: 0 0 0 10px; }
+	.logo { width: 50%; padding: 0 0 0 0; }
 	.total-overlay-trigger::before { font-size: 18px; top: 40px; padding: 0 10px 0 0; }
 	.total-overlay-sticky .logo { width: 100%; }
 	.total-overlay-sticky .logo > a { width: 75%; }
