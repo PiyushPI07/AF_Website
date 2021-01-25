@@ -5,7 +5,7 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
 
 @import "css/reset.css";
-
+@import "landing.css";
 
 	/* event cards */
 	div.event-card{
@@ -13,6 +13,77 @@
 		background-color: #006b00 !important;
 		
 	}
+
+@font-face {
+	font-family: snapITC;
+	src: url("fonts/snap_itc.ttf");
+}
+
+/* Landing animation section start */
+html{
+    scroll-behavior: smooth;
+}
+#slider-button{
+    height: 50px;
+    padding: 5px 20px;
+    font-family: "snapITC";
+    color: #a81c51;
+    font-weight: 400;
+    font-size: 25px;
+    background: rgb(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 0px;
+    opacity: 1;
+    transition: letter-spacing .3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+}
+#slider-button:hover{
+    background-color: #a81c51;
+    color: unset;
+    letter-spacing: 10px;
+}
+#landing-heading{
+    font-size: 40px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in;
+}
+#landing-image{
+    visibility: visible;
+    margin-bottom: 100px;
+    height: 300px;
+    width: 300px;
+    z-index: 1;
+    transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out;
+    
+}
+
+.landing-effect{
+    /* margin-bottom: 0px !important; */
+    position: relative;
+    z-index: 1;
+    height: 65px;
+    width: 65px;
+}
+.landing-effect-rev{
+    transition: transform .5s ease-in-out,height .5s ease-out,width .5s ease-out;
+}
+@media only screen and (max-width: 750px) {
+    #landing-image{
+        visibility: visible;
+        margin-bottom: 40px;
+        height: 200px;
+        width: 200px;
+        z-index: 1;
+        transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out;
+        
+    } 
+    #landing-heading{
+        font-size: 30px;
+    }
+}
+
+/* Landing animation section ends */
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -655,15 +726,15 @@
 	
 	#main { float: left; margin: 0; position: relative; width: 100%; }
 	
-	.slider-container { backface-visibility: hidden; margin: 0 0 20px; display: table; float: left; height: 100%;	min-height: 100%; overflow: hidden; position: relative; vertical-align: middle; width: 100%;}
-	.slider { background-image:url(http://placehold.it/1920x1000&text=Banner+Image); backface-visibility: hidden; display: table; float: left; height: 100%; width: 100%; }
-	.slider-container .container, .slider-container .parallax { position: static; }	
+	.slider-container { backface-visibility: hidden; margin: 0 0 20px; display: flex; float: left; height: 100%;	min-height: 100%; overflow: hidden; position: relative; vertical-align: middle; width: 100%;}
+	.slider { background-image:url(http://placehold.it/1920x1000&text=Banner+Image); backface-visibility: hidden; display: flex; float: left; height: 100%; width: 100%; justify-content: center; align-items: center; flex-direction: column;}
+	.slider-container .container, .slider-container .parallax { position: relative; }	
 	
-	.slider::before, .slider::after { border: 1px solid #1c1c1c; bottom: 0; content: ""; left: 0; margin: 15px; position: absolute; right: 0; top: 0;}
+	.slider::before, .slider::after { border: 1px solid #1c1c1c; bottom: 0; content: ""; left: 0; margin: 15px; position: relative; right: 0; top: 0;}
 	.slider::before { margin: 15px; }	
 	.slider::after { margin: 10px; }
 	
-	.slider.parallax .caption { display: table-cell; left: 50%; position: absolute; text-align: center; top: 50%; transform: translate(-50%, -50%); vertical-align: middle; width: 100%;}
+	.slider.parallax .caption { display: flex; left: 50%; position: absolute; text-align: center; top: 50%; transform: translate(-50%, -50%); vertical-align: middle; width: 100%;}
 	
 	.fullwidth-section { clear: both; float: left; margin: 0; padding: 0; width: 100%;}
 	
@@ -672,9 +743,9 @@
 	.parallax-img { background: url(images/parallax-img.jpg); background-size: cover; background-attachment: fixed; background-repeat: no-repeat;}
 	.dark-skin .parallax-img { background: url(images/parallax-img-dark.jpg); background-size: cover; background-attachment: fixed; background-repeat: no-repeat;}
 		
-	.parallax-img:after, .map-parallax:after { background: url(images/copy-right-shape.png) no-repeat center center; content: ""; height: 149px; left: 0; margin: 0 auto; position: absolute; right: 0; bottom:0; width: 100%;}
+	.parallax-img:after, .map-parallax:after { background: url(images/copy-right-shape.png) no-repeat center center; content: ""; height: 149px; left: 0; margin: 0 auto; position: relative; right: 0; bottom:0; width: 100%;}
 	
-	.slider-container{ display: block\9; /* IE9 only override */}
+	.slider-container{ display: flex; /* IE9 only override */}
 	
 	@media screen and (-webkit-min-device-pixel-ratio:0) { /* Safari only override */
 	::i-block-chrome, .parallax { position: static;}
