@@ -1,27 +1,49 @@
+import sys
 from django.db import models
 from django.urls import reverse
 import datetime
 from django.utils import timezone
 import pytz
+from PIL import Image
+from io import BytesIO
+from django.core.files.uploadedfile import InMemoryUploadedFile
 utc=pytz.UTC
 
 class Member(models.Model):
     roll_number = models.CharField(max_length=8, primary_key=True)
     member_name = models.CharField(max_length=25)
-    post = models.CharField(max_length=300, blank=True, help_text='Insert past post names also. ex, <batch> Convener for a past batch convener')
-    insta = models.URLField(default=" ")
+    post = models.CharField(max_length=50, blank=True, help_text='Enter for past postholders also. ex, <batch> Convener for a past batch convener')
+    insta = models.URLField(verbose_name="Instagram profile URL", blank=True)
     email = models.EmailField(max_length = 50,default=" ")
-    batch = models.CharField(verbose_name='batch', max_length=4, help_text="passing year")
-    head = models.BooleanField(default=False)
-    testimonial = models.TextField(default=" ")
+    batch = models.CharField(verbose_name='Batch', max_length=4, help_text="passing year")
+    curr_core = models.BooleanField(default=False, help_text="Is this member current core member?")
+    testimonial = models.TextField(default=" ", blank=True)
     member_img = models.ImageField(upload_to='images/members')
+    def save(self, *args, **kwargs):
+        if self.roll_number:
+            self.member_img = self.compress_image(self.member_img)
+        super(Member, self).save(*args, **kwargs)
+    
+    def compress_image(self, member_img):
+        image_temporary = Image.open(member_img)
+        output_io_stream = BytesIO()
+        image_temp_resized = image_temporary.resize((440, 650))                        #Resize to keep a consistent image size
+        image_temp_resized.save(output_io_stream, format = 'JPEG', quality=30)         #lossless compression
+        output_io_stream.seek(0)
+        member_img = InMemoryUploadedFile(output_io_stream,'ImageField', "%s.jpg" % member_img.name.split('.')[0], 'image/jpeg', sys.getsizeof(output_io_stream), None)
+        return member_img
     active = models.BooleanField(verbose_name="member status", default=True)
+    class Meta:
+        ordering = ['-batch', '-member_name']
     def __str__(self):
         return self.member_name
     @property
     def alumni_filter(self):
         curr_year = datetime.datetime.now().year
         return self.batch + 4 < curr_year and self.batch < curr_year
+    @property
+    def core_filter(self):
+        return self.curr_core and self.active
 
 class Event(models.Model):
 
@@ -42,6 +64,7 @@ class Art(models.Model):
     SKT = 'Sketches'
     DDL = 'Doodles'
     ABS = 'Abstract'
+    ANIM = 'Anime'
     PRT = 'Portrait'
     NTR = 'Nature'
     DGT = 'Digital'
@@ -49,6 +72,7 @@ class Art(models.Model):
     art_choices = [
         (SKT, 'Sketches'),
         (DDL, 'Doodles'),
+        (ANIM, 'Anime'),
         (ABS, 'Abstract'),
         (PRT, 'Portrait'),
         (NTR, 'Nature'),
@@ -56,6 +80,22 @@ class Art(models.Model):
         (OTR, 'Other')
     ]
     art_image = models.ImageField(upload_to='images/art')
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.art_image = self.compress_image(self.art_image)
+        super(Art, self).save(*args, **kwargs)
+    
+    def compress_image(self, art_image):
+        image_temporary = Image.open(art_image)
+        output_io_stream = BytesIO()
+        # image_temp_resized = image_temporary.resize((640, 360))
+        image_temporary.save(output_io_stream, format = 'JPEG', quality=30)         #lossless compression
+        output_io_stream.seek(0)
+        art_image = InMemoryUploadedFile(output_io_stream,'ImageField', "%s.jpg" % art_image.name.split('.')[0], 'image/jpeg', sys.getsizeof(output_io_stream), None)
+        return art_image
+
+
     title = models.CharField(max_length=20)
     author = models.ForeignKey(Member, on_delete=models.CASCADE, related_name='art_posts')
     created_on = models.DateTimeField(auto_now_add=True)
@@ -75,7 +115,19 @@ class Blog(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     blog_img = models.ImageField(upload_to='images/blog')
-
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.blog_img = self.compress_image(self.blog_img)
+        super(Blog, self).save(*args, **kwargs)
+    
+    def compress_image(self, blog_img):
+        image_temporary = Image.open(blog_img)
+        output_io_stream = BytesIO()
+        # image_temp_resized = image_temporary.resize((640, 360))
+        image_temporary.save(output_io_stream, format = 'JPEG', quality=40)         #lossless compression
+        output_io_stream.seek(0)
+        blog_img = InMemoryUploadedFile(output_io_stream,'ImageField', "%s.jpg" % blog_img.name.split('.')[0], 'image/jpeg', sys.getsizeof(output_io_stream), None)
+        return blog_img
     class Meta:
         ordering = ['-created_on']
 

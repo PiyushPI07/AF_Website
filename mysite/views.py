@@ -28,7 +28,7 @@ def index(request):
 def about(request):
     year = datetime.datetime.now().year
     batches_to_display = [year-1, year-2, year-3, year-4]
-    testimonials = Member.objects.filter(batch__in=batches_to_display).exclude(testimonial=None)
+    testimonials = Member.objects.filter(batch__in=batches_to_display).exclude(testimonial='')
     context = {
         'testimonials': testimonials,
     }
@@ -145,10 +145,10 @@ def contact(request):
     return render(request, 'contact.html')
 
 def team(request):
-    members = Member.objects.filter(active=True)
+    members = Member.objects.filter(active=True).order_by('batch', 'member_name')
     year = datetime.datetime.now().year
     batches_to_display = [year-1, year-2, year-3, year-4]
-    alumni = Member.objects.filter(batch__in=batches_to_display)
+    alumni = Member.objects.filter(batch__in=batches_to_display).order_by('-post', 'member_name')
     context = {
         'members': members,
         'batches_to_display': batches_to_display,

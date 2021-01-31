@@ -30,7 +30,9 @@
 		z-index: -1; 
 		animation-name: rotate;
 		transform-origin: 71px 97px !important;
-		animation-duration: 0.7s;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease;
 		animation: 2s rotate 0s normal none infinite running floating; 
 		-webkit-animation: 2s rotate 0s normal none infinite running floating; 
 		-moz-animation: 2s rotate 0s normal none infinite running floating; 

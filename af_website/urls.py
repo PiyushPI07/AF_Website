@@ -34,7 +34,7 @@ urlpatterns = [
     path('events/', views.events, name='events'),
     path('team/', views.team, name = 'team'),
     path('udaan/thank_you', views.thank_you, name='thank_you'),
-    path('volunteer_registration', volunteer_form_view, name='volunteer_registration')
+    path('volunteer_registration', volunteer_form_view, name='volunteer_registration'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
