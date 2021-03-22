@@ -16,7 +16,7 @@
             <div class="main-title pullDown">
                 <h3> Artists' Forum NITK </h3>
             </div>
-            <p style="text-align: justify;">
+            <p class="desc" >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac. Eu non diam phasellus vestibulum lorem sed risus ultricies tristique. Quis enim lobortis scelerisque fermentum dui faucibus. Augue ut lectus arcu bibendum at varius vel pharetra. Risus nec feugiat in fermentum posuere urna nec tincidunt. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Feugiat in fermentum posuere urna nec tincidunt praesent semper. Condimentum vitae sapien pellentesque habitant. Lectus mauris ultrices eros in cursus turpis. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Scelerisque varius morbi enim nunc faucibus a. Maecenas volutpat blandit aliquam etiam erat velit. Arcu risus quis varius quam. Ut porttitor leo a diam sollicitudin tempor id. Elementum nibh tellus molestie nunc non blandit massa enim. Nunc faucibus a pellentesque sit.
             </p>
         </div>
@@ -30,15 +30,21 @@
                 
                 
                 <div class="dt-sc-one-column column first">
-                    <div class="recent-gallery-container">
+                    <div class="recent-gallery-container" >
                         <ul class="recent-gallery">
                             {% for testimonial in testimonials %}
                             <li>
-                                <blockquote style="margin:40px">
+                                <blockquote >
                                     <span class="fa fa-quote-left fa-3x" style="color: #a81c51;"></span>
-                                    <q>{{testimonial.testimonial}}</q>
+                                    <q style="font-size: 20px;">{{testimonial.testimonial}}</q>
                                     <h6>{{testimonial.member_name}}</h6>
-                                    <a>{{testimonial.post}}</a>                                                                        
+                                    
+                                    {% if testimonial.post != 9 %}
+                                    <a>{{testimonial.get_post_display}}</a>
+                                    {% else %}
+                                    <p>Batch of {{testimonial.batch}}</p>                                                                      
+                                    {% endif %}
+                                        
                                 </blockquote>
                             </li>
                             {% endfor %}

@@ -16,7 +16,7 @@
             <h3> Art Blog </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
         </div>
-        <section id="primary" class="with-sidebar with-right-sidebar">
+        <section id="primary" class="content-full-width">
             <div class="blog-items apply-isotope clear">
                     
                 {% for blogpost in blog_list %}
@@ -33,7 +33,6 @@
                             <div class="entry-metadata">
                                 <p class="author"> <i class="fa fa-user"></i> By: {{blogpost.author}} </p>
                                 <p><i class="fa fa-calendar"></i>{{ blogpost.created_on|date:"D, d M Y" }}</p>
-                                <p><i class="fa fa-comments"></i>14</p>
                             </div>
                             <div class="entry-body">
                                 <p style="text-align: justify;">{{blogpost.content|truncatechars:100}}</p>

@@ -11,6 +11,7 @@ from .models import *
 def index(request):
     full_member_list = Member.objects.all()
     art_list = Art.objects.all()
+    recruitments = True
     # art_image = ArtImage.objects.all()
     image_gallery_short = ''
     event_list = []
@@ -20,6 +21,7 @@ def index(request):
         'event_list': event_list,
         'image_gallery_short': image_gallery_short,
         'render_recruitment_form': True,
+        'recruitments': recruitments
         # 'art_image': art_image,
     }
     return render(request, 'index.html', context=context)
@@ -90,11 +92,13 @@ def blog_post(request,pk):
 #     return render(request, 'udaan.html', context=context)
 
 def udaan_view(request, *args, **kwargs):
-    static_data= Udaan_static.objects.get(id=1)
+    static_data= StaticContent.objects.get(id=1)
     carousel_imgs = Udaan_image.objects.filter(display_on_caurosel = True)
     events = Udaan_event.objects.all()
     context = {
-        'static': static_data,
+        'desc': static_data.udaan_description,
+        'date': static_data.udaan_date.month,
+        'form_open': static_data.sand_art_form,
         'carousel_images': carousel_imgs,
         'event_list': events,
         'is_form_submitted': False,
@@ -111,6 +115,19 @@ def udaan_view(request, *args, **kwargs):
         context['form'] = form
     return render(request, 'udaan.html', context)
 
+def check_back_later(request, t):
+    dates = StaticContent.objects.get(id=1)
+    if t == 's_art404':
+        disp_text = 'Sand Art Competition '
+        date = dates.udaan_date.strftime('%B')
+    if t == 'recs404':
+        disp_text = 'Recruitment'
+        date = dates.recs_date.strftime('%B')
+    context = {
+        'disp_text': disp_text,
+        'date': date
+    }
+    return render(request, 'check_back_later.html', context=context)
 
 def events(request):
     event_list = Event.objects.all()
@@ -145,10 +162,10 @@ def contact(request):
     return render(request, 'contact.html')
 
 def team(request):
-    members = Member.objects.filter(active=True).order_by('batch', 'member_name')
+    members = Member.objects.filter(active=True).order_by('post', 'batch', 'member_name')
     year = datetime.datetime.now().year
     batches_to_display = [year-1, year-2, year-3, year-4]
-    alumni = Member.objects.filter(batch__in=batches_to_display).order_by('-post', 'member_name')
+    alumni = Member.objects.filter(batch__in=batches_to_display).order_by('post', 'member_name')
     context = {
         'members': members,
         'batches_to_display': batches_to_display,

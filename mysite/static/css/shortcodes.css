@@ -670,7 +670,8 @@
 	
 	.dt-sc-toggle-frame { float: left; width: 100%; margin: 0 0 4px; }
 	.dt-sc-toggle-frame .dt-sc-toggle-content { position:relative; margin:0px; width:100%; padding:0px; }
-	.dt-sc-toggle-frame .dt-sc-toggle-content .block { padding:20px 10px 15px 10px; margin:0px; }
+	/* .dt-sc-toggle-frame .dt-sc-toggle-content .block { padding:20px 10px 15px 10px; margin:0px; } responsible for the white strip on alumni tab */
+	.dt-sc-toggle-frame .dt-sc-toggle-content .block {margin:20px; }
 		
 	.faq h5.dt-sc-toggle-accordion { padding:0px 0px 0px 42px; margin-bottom:13px; line-height:35px; }	
 	.faq h5.dt-sc-toggle-accordion:before { font-family:'Lato', sans-serif; content:'?'; background:#181818; width:27px; height:27px; text-align:center; line-height:27px; color:#ffffff; border:3px solid #d9d9d9; border-radius:27px; }
