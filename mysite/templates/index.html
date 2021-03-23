@@ -5,7 +5,7 @@
 <!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
 <style>
-    @media only screen and (max-width: 767px) {
+    /* @media only screen and (max-width: 767px) {
         .large-header h1{
             font-size: 40px !important;
         }
@@ -14,7 +14,7 @@
         .large-header h1{
             font-size: 0px;
         }
-    }
+    } */
     /* body{
         background: url({% static "images/bg-trial.jpg" %}) !important;
     } */
@@ -58,7 +58,7 @@
 <body>
     <div class="loader-wrapper">
         <div id="large-header" class="large-header preloader-text">
-            <h1 class="loader-title"><span>Artists'  </span>Forum</h1>
+            <h1 class="loader-title"><span>Artists'</span>Forum</h1>
         </div>        
     </div>
 <!-- loader ends-->
@@ -87,15 +87,20 @@
                         <li class="menu-item-simple-parent"><a title="Team" href="{% url 'team' %}">Team</a></li>
                         <li class="menu-item-simple-parent"><a title="About" href="{% url 'about' %}">About Us</a></li>
                         
-                        {% if request.user.is_authenticated %}
-                        <li class="menu-item-simple-parent"><a title="Application Statust" href="{% url 'application status' %}">Application Status</a></li>
+
+                        {% if recruiting %}
+                            {% if request.user.is_authenticated %}
+                            <li class="menu-item-simple-parent"><a title="Application Statust" href="{% url 'application status' %}">Application Status</a></li>
+                            {% else %}
+                            <li class="menu-item-simple-parent dropdown-widget"><a href="#" class="dropdown-toggle" data-toggle="dropdown-widget" data-hover="dropdown-widget" aria-haspopup="true">Recruitments<span class="has-child animation"></span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="{% url 'register' %}">Register</a></li>
+                                    <li><a href="{% url 'login' %}">Log In</a></li>
+                                </ul>
+                            </li>
+                            {% endif %}
                         {% else %}
-                        <li class="menu-item-simple-parent dropdown-widget"><a href="#" class="dropdown-toggle" data-toggle="dropdown-widget" data-hover="dropdown-widget" aria-haspopup="true">Recruitments<span class="has-child animation"></span></a>
-                            <ul class="sub-menu">
-                            	<li><a href="{% url 'register' %}">Register</a></li>
-                                <li><a href="{% url 'login' %}">Log In</a></li>
-                            </ul>
-                        </li>
+                        <li class="menu-item-simple-parent"><a title="About" href="{% url 'oops' 'recs404' %}">Recruitments</a></li>
                         {% endif %}
                             
                     </ul>
@@ -152,7 +157,7 @@
                                 <figcaption>
                                     <div class="portfolio-detail">
                                         <div class="views">
-                                            <div class="fa fa-camera-retro" style="margin-right: 1em;"></div><span>3</span>
+                                            <div class="fa fa-camera-retro" style="margin-right: 1em;"></div><span></span>
                                         </div>
                                         <div class="portfolio-title">
                                             <h5>{{art.title}}</h5>
@@ -191,7 +196,7 @@
                 <li><a href="https://github.com/Artists-Forum-NITK" class="fa fa-github"></a></li>
             </ul>
             <ul>
-                <p> <a href="#">ARTISTS' FORUM NITK Surathkal</a></p>
+                <p>Designed with <i class="fa fa-heart" style="color:#a81c51;"></i> at <a href="#">ARTISTS' FORUM NITK Surathkal</a></p>
             </ul>
             
             

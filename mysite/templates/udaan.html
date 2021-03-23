@@ -8,7 +8,13 @@
                 <h2>Udaan<span> NITK's own beach event</span></h2>
                 <div class="user-summary">
                     <div class="account-links">
+                        
+                        {% if form_open %}
                         <a href="#">Register for Sand Art Competition</a>
+                        {% else %}
+                        <a href="{% url 'oops' 's_art404' %}">Register for Sand Art Competition</a>
+                        {% endif %}
+                            
                     </div>
                 </div>
             </div>
@@ -21,29 +27,20 @@
                         {% for image in carousel_images %}
                             <li> <img src="{{image.img.url}}" alt="image"/> </li>    
                         {% endfor %}
-                            
-                        <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+1" alt="image"/> </li>
-                        <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+2" alt="image"/> </li>
-                        <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+3" alt="image"/> </li>
-                        <li> <img src="http://placehold.it/1920x800&text=Service+Carousel+4" alt="image"/> </li>
+
                     </ul>
                     <div id="bx-pager">
                         
                         {% for image in carousel_images %}
                             <a href="#" data-slide-index='0'><img src='{{image.img.url}}' alt='image' /></a>    
                         {% endfor %}
-                            
-                        <a href="#" data-slide-index='0'><img src='http://placehold.it/1920x800&text=Service+Thumb+1/000000' alt='image' /></a>
-                        <a href="#" data-slide-index='1'><img src='http://placehold.it/1920x800&text=Service+Thumb+2/000000' alt='image' /></a>
-                        <a href="#" data-slide-index='2'><img src='http://placehold.it/1920x800&text=Service+Thumb+3/000000' alt='image' /></a>
-                        <a href="#" data-slide-index='3'><img src='http://placehold.it/1920x800&text=Service+Thumb+4/000000' alt='image' /></a>
                     </div>                            	
                 </div>
             </div>
             <div class="dt-sc-hr-invisible-small"> </div>
             <div class="main-title"></div>
             <div class="container">
-                <p style=" text-align: justify;" >{{static.main_description}}</p>
+                <p class="desc" >{{desc}} </p>
             </div>
             <div class="dt-sc-hr-invisible-small"> </div>
             <div class="main-title"></div>
@@ -56,21 +53,7 @@
                     {% for event in event_list %}
                     
                     {% if forloop.counter|divisibleby:2 %}
-                        <!-- <div class="dt-sc column" style="backdrop-filter: blur(10px);">
-                            <div class="dt-sc-icon-content-wrapper">
-                                <div class="dt-sc-two-third column">
-                                    <div class="dt-sc-ico-content animate" data-animation="fadeInRight" data-delay="100">
-                                        <h6>{{event.event_name}}</h6>
-                                        <p><span>Name:</span>Darren Tiler</p>
-                                        <div class="dt-sc-hr-invisible-very-small"></div>
-                                        <p>{{event.event_description}}</p>
-                                    </div>
-                                </div>
-                                <div class="dt-sc-one-third first column">
-                                    <div><img src="{{event.event_img.url}}" data-animation="fadeInLeft" data-delay="100" alt=""></div>
-                                </div>
-                            </div>
-                        </div> -->
+
                         <div class="dt-sc-one-third column first ">
                             <div class="dt-sc-icon-wraper"><img class="event-img" src="{{event.event_img.url}}" data-animation="fadeInLeft" data-delay="100" alt=""></div>
                         </div>

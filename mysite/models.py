@@ -10,15 +10,62 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 utc=pytz.UTC
 
 class Member(models.Model):
+    CON = 0
+    JCON = 1
+    PRESI = 2
+    VPRESI = 3
+    SECR = 4
+    CHAIR = 5
+    WEBH = 6
+    CCO = 7
+    PR = 8
+    EXM = 9
+    # CON = "Convener"
+    # JCON = "Joint Convener"
+    # PRESI = "President"
+    # VPRESI = "Vice President"
+    # SECR = "Secretary"
+    # CHAIR = "Chair"
+    # WEBH = "Website Head"
+    # CCO = "Chief Co-ordinator"
+    # PR = "Public Relations Head"
+    # EXM = "Executive Member"
+    posts = [
+        (CON, "Convener"),
+        (JCON, "Joint Convener"),
+        (PRESI, "President"),
+        (VPRESI, "Vice President"),
+        (SECR, "Secretary"),
+        (CHAIR, "Chair"),
+        (WEBH, "Website Head"),
+        (CCO, "Chief Co-ordinator"),
+        (PR, "Public Relations Head"),
+        (EXM, "Executive Member")
+    ]
+    ranks = {
+        "Convener": 0,
+        "Joint Convener": 1,
+        "President": 2,
+        "Vice president": 3,
+        "Secretary": 4,
+        "Chair": 5,
+        "Website Head": 6,
+        "Chief Co-ordinator": 7,
+        "Public Relations Head": 8,
+        "Executive Member": 9
+    }
     roll_number = models.CharField(max_length=8, primary_key=True)
     member_name = models.CharField(max_length=25)
-    post = models.CharField(max_length=50, blank=True, help_text='Enter for past postholders also. ex, <batch> Convener for a past batch convener')
+    # post = models.CharField(max_length=50, blank=True, help_text='Enter for past postholders also. ex, <batch> Convener for a past batch convener')
+    # post = models.CharField(max_length=50, choices=posts, default="Executive Member")
+    post = models.IntegerField(choices=posts)
     insta = models.URLField(verbose_name="Instagram profile URL", blank=True)
     email = models.EmailField(max_length = 50,default=" ")
     batch = models.CharField(verbose_name='Batch', max_length=4, help_text="passing year")
     curr_core = models.BooleanField(default=False, help_text="Is this member current core member?")
     testimonial = models.TextField(default=" ", blank=True)
     member_img = models.ImageField(upload_to='images/members')
+    # rank = models.IntegerField(default=ranks[post.])
     def save(self, *args, **kwargs):
         if self.roll_number:
             self.member_img = self.compress_image(self.member_img)
@@ -27,14 +74,14 @@ class Member(models.Model):
     def compress_image(self, member_img):
         image_temporary = Image.open(member_img)
         output_io_stream = BytesIO()
-        image_temp_resized = image_temporary.resize((440, 650))                        #Resize to keep a consistent image size
-        image_temp_resized.save(output_io_stream, format = 'JPEG', quality=30)         #lossless compression
+        # image_temp_resized = image_temporary.resize((440, 650))                        #Resize to keep a consistent image size
+        image_temporary.save(output_io_stream, format = 'JPEG', quality=30)         #lossless compression
         output_io_stream.seek(0)
         member_img = InMemoryUploadedFile(output_io_stream,'ImageField', "%s.jpg" % member_img.name.split('.')[0], 'image/jpeg', sys.getsizeof(output_io_stream), None)
         return member_img
     active = models.BooleanField(verbose_name="member status", default=True)
     class Meta:
-        ordering = ['-batch', '-member_name']
+        ordering = ['batch', 'member_name', 'post']
     def __str__(self):
         return self.member_name
     @property
@@ -54,7 +101,7 @@ class Event(models.Model):
     @property
     def is_past(self):
         utc_date = utc.localize(datetime.datetime.now())
-        return utc_date < self.date
+        return utc_date > self.date
 
     def __str__(self):
         return self.title
@@ -144,11 +191,13 @@ class EventImage(models.Model):
 
 
 #Udaan model
-class Udaan_static(models.Model):
-    main_description= models.TextField()
-    date= models.DateTimeField( auto_now=False, auto_now_add=False, null = True)
-    def __str__(self):
-        return self.main_description
+class StaticContent(models.Model):
+    udaan_description= models.TextField()
+    udaan_date= models.DateTimeField( auto_now=False, auto_now_add=False, null = True)
+    sand_art_form = models.BooleanField(verbose_name="Sand Art Competion form open", default=False, help_text="Check if Sand Art Competition form is to be displayed.")
+    recs_date= models.DateField( auto_now=False, auto_now_add=False, null = True)
+    recs_form = models.BooleanField(verbose_name="Recruitment form open", default=False, help_text="Check if we recruitments form is to be displayed")
+
 
 
 class Udaan_image(models.Model):
@@ -157,6 +206,20 @@ class Udaan_image(models.Model):
     alt_text = models.CharField( max_length=50)
     display_on_caurosel = models.BooleanField(default = False)
 
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.img = self.compress_image(self.img)
+        super(Udaan_image, self).save(*args, **kwargs)
+    
+    def compress_image(self, img):
+        image_temporary = Image.open(img)
+        output_io_stream = BytesIO()
+        # image_temp_resized = image_temporary.resize((640, 360))
+        image_temporary.save(output_io_stream, format = 'JPEG', quality=30)         #lossless compression
+        print("Compressing image...")
+        output_io_stream.seek(0)
+        img = InMemoryUploadedFile(output_io_stream,'ImageField', "%s.jpg" % img.name.split('.')[0], 'image/jpeg', sys.getsizeof(output_io_stream), None)
+        return img
     def __str__(self):
         return self.alt_text
 

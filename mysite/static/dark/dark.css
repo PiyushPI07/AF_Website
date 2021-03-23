@@ -81,7 +81,7 @@ body, .menu.type1, .portfolio figcaption, .portfolio figcaption::before, .bx-con
 /*----*****---- << Box-shadow Color >> ----*****----*/
 
 .dt-sc-icon-content-wrapper:hover .dt-sc-ico-content { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset; -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset; -moz-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset; }
-.dt-sc-ico-content { box-shadow: 0 0 0 200px #252525 inset; -webkit-box-shadow: 0 0 0 200px #252525 inset; -moz-box-shadow: 0 0 0 200px #252525 inset; }
+.dt-sc-ico-content { box-shadow: 0 0 0 250px #252525 inset; -webkit-box-shadow: 0 0 0 250px #252525 inset; -moz-box-shadow: 0 0 0 250px #252525 inset; }
 .woocommerce form .form-row label span, .woocommerce-shipping-fields label span { box-shadow:0 0 0 2px #ffffff inset; -moz-box-shadow:0 0 0 2px #ffffff inset; -webkit-box-shadow:0 0 0 2px #ffffff inset; }
 .dt-sc-dropcap-bordered { box-shadow: 0 0 0 10px #ffffff inset; -moz-box-shadow: 0 0 0 10px #ffffff inset; -webkit-box-shadow: 0 0 0 10px #ffffff inset; }
 p:hover .dt-sc-dropcap-bordered { box-shadow: 0 0 0 1px #ffffff inset; -moz-box-shadow: 0 0 0 1px #ffffff inset; -webkit-box-shadow: 0 0 0 1px #ffffff inset;}

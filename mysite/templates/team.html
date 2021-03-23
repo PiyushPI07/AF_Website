@@ -6,6 +6,29 @@
 <head>
     <link href="{% static 'css/animation.css' %}" rel="stylesheet" type="text/css" media="all" />
 
+    <style>
+        .img-wrap {
+            /* width: 200px;
+            height: 150px; */
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            margin: 0;
+        }
+        div > img {
+            display: block;
+            position: absolute;
+            /* top: 50%;
+            left: 50%; */
+            min-height: 50%;
+            min-width: 50%;
+            /* width: 50%; */
+            /* transform: translate(-50%, -50%); */
+        }
+        h3 {
+            font-size: 20px;
+        }
+    </style>
 </head>
     <div id="main">
         <div class="breadcrumb"><!-- *BreadCrumb Starts here** -->
@@ -32,19 +55,19 @@
                         {% for member in members %}
                             {% if member.curr_core %}
                                 <div class="dt-sc-one-half column first">
-                                    <div class="dt-sc-icon-content-wrapper">
+                                    <div class="dt-sc-icon-content-wrapper img-wrap">
                                         <div class="dt-sc-one-half column first">
                                             <div class="dt-sc-ico-content  fadeRight">
-                                                <h3> {{member.member_name}}</h3>
-                                                <p style="font-size: 25px;">{{member.post}}</p>
+                                                <h3 > {{member.member_name}}</h3>
+                                                <p style="font-size: 20px;">{{ member.get_post_display }}</p>
                                                 <p>
                                                     <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
                                                     <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="dt-sc-one-half column dt-sc-icon-wrapper">
-                                            <img class="fadeRight"  src="{{member.member_img.url}}" style="width: 55%;" alt="">
+                                        <div class="dt-sc-one-half column dt-sc-icon-wrapper ">
+                                            <img class="fadeRight"  src="{{member.member_img.url}}" style="width: 70%;" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -61,11 +84,12 @@
                         {% for member in members %}
                             {% if not member.curr_core  %}
                                 <div class="dt-sc-one-half column first">
-                                    <div class="dt-sc-icon-content-wrapper">
+                                    <div class="dt-sc-icon-content-wrapper img-wrap">
                                         <div class="dt-sc-one-half column first">
                                             <div class="dt-sc-ico-content fadeRight">
                                                 <h3> {{member.member_name}}</h3>
-                                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                                <p>Batch of {{member.batch}}</p>
+                                                <!-- <div class="dt-sc-hr-invisible-very-small"></div> -->
                                                 <p>
                                                     <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
                                                     <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
@@ -73,7 +97,7 @@
                                             </div>
                                         </div>
                                         <div class="dt-sc-one-half column dt-sc-icon-wrapper">
-                                            <img class= "fadeRight"  src="{{member.member_img.url}}" style="width: 55%;" alt="">
+                                            <img class= "fadeRight"  src="{{member.member_img.url}}" style="width: 60%;" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -125,13 +149,13 @@
                                         
                                             {% if alumnus.batch == batch|stringformat:"i" %}
                                                 <div class="dt-sc-one-half column first">
-                                                    <div class="dt-sc-icon-content-wrapper">
+                                                    <div class="dt-sc-icon-content-wrapper img-wrap">
                                                         <div class="dt-sc-one-half column first">
                                                             <div class="dt-sc-ico-content fadeRight" data-delay="100">
                                                                 <h3> {{alumnus.member_name}}</h3>
                                                                 
-                                                                {% if alumnus.post %}
-                                                                    <p style="font-size: 15px;">{{alumnus.post}}</p>
+                                                                {% if alumnus.post != 9 %}
+                                                                    <p style="font-size: 15px;">{{alumnus.get_post_display}}</p>
                                                                     {% else %}
                                                                     <div class="dt-sc-hr-invisible-small"></div>
                                                                 {% endif %}
@@ -143,7 +167,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="dt-sc-one-half column dt-sc-icon-wrapper">
-                                                            <img class= "fadeRight"  data-delay="100" src="{{alumnus.member_img.url}}" style="width: 55%;" alt="">
+                                                            <img class= "fadeRight"  data-delay="100" src="{{alumnus.member_img.url}}" style="width: 60%;" alt="">
                                                         </div>
                                                     </div>
                                                 </div>
