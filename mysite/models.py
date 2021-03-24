@@ -18,19 +18,14 @@ class Member(models.Model):
     CHAIR = 5
     WEBH = 6
     CCO = 7
-    PR = 8
-    EXM = 9
-    # CON = "Convener"
-    # JCON = "Joint Convener"
-    # PRESI = "President"
-    # VPRESI = "Vice President"
-    # SECR = "Secretary"
-    # CHAIR = "Chair"
-    # WEBH = "Website Head"
-    # CCO = "Chief Co-ordinator"
-    # PR = "Public Relations Head"
-    # EXM = "Executive Member"
-    posts = [
+    CRCO = 8
+    PR = 9
+    ECO = 10
+    PMC = 11
+    WC = 12
+    EXM = 13
+
+    POST_CHOICES = [
         (CON, "Convener"),
         (JCON, "Joint Convener"),
         (PRESI, "President"),
@@ -39,33 +34,35 @@ class Member(models.Model):
         (CHAIR, "Chair"),
         (WEBH, "Website Head"),
         (CCO, "Chief Co-ordinator"),
+        (CRCO, "Creative Co-ordinator"),
         (PR, "Public Relations Head"),
+        (ECO, "Events Co-ordinator"),
+        (PMC, "Publicity and Media Co-ordinator"),
+        (WC, "Workshops Co-ordinator"),
         (EXM, "Executive Member")
     ]
-    ranks = {
-        "Convener": 0,
-        "Joint Convener": 1,
-        "President": 2,
-        "Vice president": 3,
-        "Secretary": 4,
-        "Chair": 5,
-        "Website Head": 6,
-        "Chief Co-ordinator": 7,
-        "Public Relations Head": 8,
-        "Executive Member": 9
-    }
+
+    CORE = "Core"
+    MCT = "Media and Content Team"
+    WEB = "Website Team"
+    BTH = "Both Media and Website Team"
+
+    TEAM_CHOICES = [
+        (CORE, "Core"),
+        (MCT, "Media and Content Team"),
+        (WEB, "Website Team"),
+        (BTH, "Both Media and Website Team")
+    ]
     roll_number = models.CharField(max_length=8, primary_key=True)
     member_name = models.CharField(max_length=25)
-    # post = models.CharField(max_length=50, blank=True, help_text='Enter for past postholders also. ex, <batch> Convener for a past batch convener')
-    # post = models.CharField(max_length=50, choices=posts, default="Executive Member")
-    post = models.IntegerField(choices=posts)
+    post = models.IntegerField(choices=POST_CHOICES, default=13)
     insta = models.URLField(verbose_name="Instagram profile URL", blank=True)
     email = models.EmailField(max_length = 50,default=" ")
     batch = models.CharField(verbose_name='Batch', max_length=4, help_text="passing year")
     curr_core = models.BooleanField(default=False, help_text="Is this member current core member?")
+    team = models.CharField(verbose_name="Executive Team", max_length=50, choices=TEAM_CHOICES, blank=True)
     testimonial = models.TextField(default=" ", blank=True)
     member_img = models.ImageField(upload_to='images/members')
-    # rank = models.IntegerField(default=ranks[post.])
     def save(self, *args, **kwargs):
         if self.roll_number:
             self.member_img = self.compress_image(self.member_img)
@@ -96,7 +93,7 @@ class Event(models.Model):
 
     title = models.CharField(max_length=50)
     description = models.TextField(default=" ")
-    date = models.DateTimeField(auto_now_add=False, default=timezone.now())
+    date = models.DateTimeField(auto_now_add=False)
     resources = models.CharField(verbose_name='Event Resources', max_length=100, blank=True)
     @property
     def is_past(self):
@@ -136,7 +133,6 @@ class Art(models.Model):
     def compress_image(self, art_image):
         image_temporary = Image.open(art_image)
         output_io_stream = BytesIO()
-        # image_temp_resized = image_temporary.resize((640, 360))
         image_temporary.save(output_io_stream, format = 'JPEG', quality=30)         #lossless compression
         output_io_stream.seek(0)
         art_image = InMemoryUploadedFile(output_io_stream,'ImageField', "%s.jpg" % art_image.name.split('.')[0], 'image/jpeg', sys.getsizeof(output_io_stream), None)
@@ -170,7 +166,6 @@ class Blog(models.Model):
     def compress_image(self, blog_img):
         image_temporary = Image.open(blog_img)
         output_io_stream = BytesIO()
-        # image_temp_resized = image_temporary.resize((640, 360))
         image_temporary.save(output_io_stream, format = 'JPEG', quality=40)         #lossless compression
         output_io_stream.seek(0)
         blog_img = InMemoryUploadedFile(output_io_stream,'ImageField', "%s.jpg" % blog_img.name.split('.')[0], 'image/jpeg', sys.getsizeof(output_io_stream), None)
@@ -214,9 +209,7 @@ class Udaan_image(models.Model):
     def compress_image(self, img):
         image_temporary = Image.open(img)
         output_io_stream = BytesIO()
-        # image_temp_resized = image_temporary.resize((640, 360))
         image_temporary.save(output_io_stream, format = 'JPEG', quality=30)         #lossless compression
-        print("Compressing image...")
         output_io_stream.seek(0)
         img = InMemoryUploadedFile(output_io_stream,'ImageField', "%s.jpg" % img.name.split('.')[0], 'image/jpeg', sys.getsizeof(output_io_stream), None)
         return img
