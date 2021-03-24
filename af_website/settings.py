@@ -38,7 +38,7 @@ else:
     EMAIL_USE_TLS = True
     DEFAULT_FROM_EMAIL = 'Artists Forum NITK <noreply@artistforum>'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.14.0.125','af.nitk.ac.in']
 
 
 # Application definition
@@ -92,10 +92,19 @@ WSGI_APPLICATION = 'af_website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/etc/mysql/my.cnf',
+        },
     }
 }
 
