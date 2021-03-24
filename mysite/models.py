@@ -7,6 +7,8 @@ import pytz
 from PIL import Image
 from io import BytesIO
 from django.core.files.uploadedfile import InMemoryUploadedFile
+from django.core.validators import MaxValueValidator, MinValueValidator
+
 utc=pytz.UTC
 
 class Member(models.Model):
@@ -141,10 +143,15 @@ class Art(models.Model):
 
     title = models.CharField(max_length=20)
     author = models.ForeignKey(Member, on_delete=models.CASCADE, related_name='art_posts')
+    score = models.IntegerField(
+        verbose_name="Score",
+        default= 1,
+        validators=[MaxValueValidator(10), MinValueValidator(0)] 
+        )
     created_on = models.DateTimeField(auto_now_add=True)
     art_type = models.CharField(verbose_name='Type', max_length=20, choices=art_choices)
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['-score', '-created_on']
 
     def __str__(self):
         return self.title
@@ -223,13 +230,6 @@ class Udaan_event(models.Model):
     def __str__(self):
         return self.event_name   
 
-class Gallery(models.Model):
-    description = models.TextField(default=" ")
-    image = models.ImageField(upload_to='images/gallery')
-    created_on = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ['-created_on']
 
 class Comment(models.Model):
     post = models.ForeignKey(to=Blog, on_delete=models.CASCADE, related_name='post_comment')
