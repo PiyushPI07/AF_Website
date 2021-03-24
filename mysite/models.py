@@ -59,7 +59,7 @@ class Member(models.Model):
     insta = models.URLField(verbose_name="Instagram profile URL", blank=True)
     email = models.EmailField(max_length = 50,default=" ")
     batch = models.CharField(verbose_name='Batch', max_length=4, help_text="passing year")
-    curr_core = models.BooleanField(default=False, help_text="Is this member current core member?")
+    # curr_core = models.BooleanField(default=False, help_text="Is this member current core member?")
     team = models.CharField(verbose_name="Executive Team", max_length=50, choices=TEAM_CHOICES, blank=True)
     testimonial = models.TextField(default=" ", blank=True)
     member_img = models.ImageField(upload_to='images/members')
