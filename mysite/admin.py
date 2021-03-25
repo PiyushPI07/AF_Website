@@ -11,7 +11,6 @@ class MemberDetails(admin.ModelAdmin):
 
 # admin.site.register(ArtImage)
 admin.site.register(EventImage)
-admin.site.register(Gallery)
 admin.site.register(Member, MemberDetails)
 admin.site.register(Event)
 admin.site.register(Blog)

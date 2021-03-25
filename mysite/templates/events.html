@@ -38,11 +38,13 @@
                                         {% endfor %}
                                     </ul>
                                 </div>
-                                <!-- <div class="dt-sc-hr-invisible-very-small"></div> -->
                                 <h5>{{event.title}}</h5>
+                                
+                                {% if event.date %}
                                 <p>Date: {{event.date|date:"D, d M Y"}}</p>
+                                {% endif %}
                                 <!-- <div class="dt-sc-hr-invisible-very-small"></div> -->
-                                <p>{{event.description}}... <a href="{{event.resources}}">more</a> </p>
+                                <p>{{event.description}} </a> </p>
                             </div>
                         </div>
                     </div>
@@ -77,9 +79,10 @@
                                 </div>
                                 <!-- <div class="dt-sc-hr-invisible-very-small"></div> -->
                                 <h5>{{event.title}}</h5>
+                                {% if event.date %}
                                 <p>Date: {{event.date|date:"D, d M Y"}}</p>
-                                <!-- <div class="dt-sc-hr-invisible-very-small"></div> -->
-                                <p>{{event.description}}...<a href="{{event.resources}}">more</a></p>
+                                {% endif %}
+                                <p>{{event.description}}</a></p>
                             </div>
                         </div>
                     </div>

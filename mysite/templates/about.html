@@ -23,6 +23,21 @@
         <div class="dt-sc-hr-invisible-small"> </div>
         <div class="main-title"></div> <!--Just for the sake of that fancy line-->
 
+        <h2>From Faculty Advisors' Desk</h2>
+        <div class="container fac-ad-wrapper">
+            <div class="facad-cont">
+                <q>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum                </q>
+            </div>
+            <div class="facad-desc">
+                <a href="https://macs.nitk.ac.in/faculty/senthil-thilak"><h3>Dr Senthil Tilak</h3></a>
+                
+                <p>Department of Mathematics And Computational Sciences <br> National Instititute of Technology, Karnataka</p>
+            </div>
+        </div>
+
+        <div class="main-title"></div> <!--Just for the sake of that fancy line-->
+
 
         <h2>Testimonials</h2>
         <div class="container">
@@ -37,8 +52,8 @@
                                     <q style="font-size: 20px;">{{testimonial.testimonial}}</q>
                                     <h6>{{testimonial.member_name}}</h6>
                                     
-                                    {% if testimonial.post != 9 %}
-                                    <a>{{testimonial.get_post_display}}</a>
+                                    {% if testimonial.post != 13 %}
+                                    <a>Batch {{testimonial.batch}} {{testimonial.get_post_display}}</a>
                                     {% else %}
                                     <p>Batch of {{testimonial.batch}}</p>                                                                      
                                     {% endif %}
@@ -49,6 +64,7 @@
                         </ul>                           	
                     </div>
                 </div>
+
             </section>  
         </div>
         <div class="dt-sc-hr-invisible-small"> </div>
@@ -63,6 +79,7 @@
                 <div class="dt-sc-contact-details"><span class="fa fa-map-marker"></span>Address: National Institute of Technology, Karnataka, India </div>
                 <div class="dt-sc-contact-details"><span class="fa fa-tablet"></span> Phone: +91 91603 61774 </div>
                 <div class="dt-sc-contact-details"><span class="fa fa-envelope"></span> Email: <a href="mailto:nitkartistforum@gmail.com">nitkartistforum@gmail.com</a> </div>
+
                 <div class="dt-sc-contact-details"><span class="fa fa-globe"></span> Web: <a href="http://af.nitk.ac.in">https://af.nitk.ac.in</a> </div>
                 <ul class="type3 dt-sc-social-icons">
                     <li class="dribbble"><a href="https://www.instagram.com/afnitk/?hl=en"> <i class="fa fa-instagram"></i> </a></li>
