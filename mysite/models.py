@@ -96,6 +96,7 @@ class Event(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField(default=" ")
     date = models.DateTimeField(auto_now_add=False, blank=True, null=True)
+
     @property
     def is_past(self):
         if self.date:
