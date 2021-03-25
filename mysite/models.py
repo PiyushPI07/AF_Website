@@ -95,12 +95,14 @@ class Event(models.Model):
 
     title = models.CharField(max_length=50)
     description = models.TextField(default=" ")
-    date = models.DateTimeField(auto_now_add=False)
-    resources = models.CharField(verbose_name='Event Resources', max_length=100, blank=True)
+    date = models.DateTimeField(auto_now_add=False, blank=True, null=True)
     @property
     def is_past(self):
-        utc_date = utc.localize(datetime.datetime.now())
-        return utc_date > self.date
+        if self.date:
+            utc_date = utc.localize(datetime.datetime.now())
+            return utc_date > self.date
+        else:
+            return False
 
     def __str__(self):
         return self.title
