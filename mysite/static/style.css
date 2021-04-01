@@ -20,7 +20,6 @@
 		font-display: swap; /* Read next point */  
 		unicode-range: U+000-5FF; /* Download only latin glyphs */  
 		src: local('Custom Font'),       
-		/* url('/fonts/custom-font.woff2') 
 		format('woff2'),         */
 		url("fonts/snap_itc.woff") 
 		format('woff');}
@@ -46,11 +45,6 @@ html{
     border: 0px;
     opacity: 1;
     transition: letter-spacing .3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    /* -moz-transition: letter-spacing .3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    -webkit-transition: letter-spacing .3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    -o-transition: letter-spacing .3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    -ms-transition: letter-spacing .3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, visibility 0.5s ease-in-out, opacity 0.5s ease-in-out; */
-
 }
 #slider-button:hover{
     background-color: #a81c51;
@@ -62,10 +56,7 @@ html{
     font-size: 40px;
     opacity: 1;
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in;
-    /* -moz-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in;
-    -webkit-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in;
-    -o-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in;
-    -ms-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in; */
+
 }
 #landing-image{
     visibility: visible;
@@ -74,15 +65,10 @@ html{
     width: 300px;
     z-index: 1;
     transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out;
-    /* -moz-transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out;
-    -webkit-transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out;
-    -o-transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out;
-    -ms-transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out; */
-    
+
 }
 
 .landing-effect{
-    /* margin-bottom: 0px !important; */
     position: relative;
     z-index: 1;
     height: 65px;
@@ -90,10 +76,6 @@ html{
 }
 .landing-effect-rev{
     transition: transform .5s ease-in-out,height .5s ease-out,width .5s ease-out;
-    /* -moz-transition: transform .5s ease-in-out,height .5s ease-out,width .5s ease-out;
-    -webkit-transition: transform .5s ease-in-out,height .5s ease-out,width .5s ease-out;
-    -o-transition: transform .5s ease-in-out,height .5s ease-out,width .5s ease-out;
-    -ms-transition: transform .5s ease-in-out,height .5s ease-out,width .5s ease-out; */
 }
 @media only screen and (max-width: 750px) {
     #landing-image{
@@ -103,11 +85,7 @@ html{
         width: 200px;
         z-index: 1;
         transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out;
-        /* -moz-transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out;
-        -webkit-transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out;
-        -o-transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out;
-        -ms-transition: transform .5s ease-in-out,height .5s ease-in-out,width .5s ease-in-out; */
-        
+       
     } 
     #landing-heading{
         font-size: 30px;
