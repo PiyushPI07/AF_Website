@@ -51,7 +51,7 @@
 
 
 		.loader-title::before { 
-			background: url("../images/af-small.png") no-repeat scroll 100% 100%;
+			background: url("../images/af-small-min.png") no-repeat scroll 100% 100%;
 			bottom: 0; 
 			content: "";
 			height: 136px; 
