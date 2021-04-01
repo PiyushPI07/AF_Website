@@ -7,3 +7,4 @@ def add_recs_status_to_context(request):
         }
     else:
         return {}
+
