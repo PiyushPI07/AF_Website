@@ -8,7 +8,6 @@
   <p align="center">
     <a href="https://af.nitk.ac.in"><strong>  Artists' Forum Website</strong></a>
     <br>
-    ·
     <a href="https://github.com/Artists-Forum-NITK/AF_Website/issues/new">Report Bug/Request Feature</a>
   </p>
 </p>
