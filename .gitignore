@@ -131,3 +131,4 @@ dmypy.json
 # Migrations
 account/migrations/*.py
 mysite/migrations/*.py
+media/images/

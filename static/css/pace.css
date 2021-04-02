@@ -13,12 +13,13 @@
 	.large-header {	position: relative;	width: 100%; height: 100%; overflow: hidden;  }
 
 	@media only screen and (max-width: 767px) {
-		.loader-title {	position: absolute;	margin: auto; padding: 0px; color: #FFF; text-align: center; left: 0; bottom: 50%; right:0; font-size: 20px; text-transform: uppercase; font-family: snapITC; z-index:1; }
+		.loader-title {	position: absolute;	margin: auto; padding: 0px; color: #FFF; text-align: center; left: 0; bottom: 50%; right:0; font-size: 20px; text-transform: uppercase; font-family: 'snap-itc'; z-index:1; }
 	
-		.loader-title span {color: #a81c51; font-size: 20px; font-family: snapITC; text-transform: uppercase; margin: 0px 100px 0px 12px; }
+		.loader-title span {color: #a81c51; font-size: 20px; font-family: 'snap-itc'; text-transform: uppercase; margin: 0px 100px 0px 12px; }
+
 
 		.loader-title::before { 
-			background: url("../images/af-small.png") no-repeat scroll 100% 100%;
+			background: url("../images/af-small-min.png") no-repeat scroll 100% 100%;
 			bottom: 0; 
 			content: "";
 			height: 136px; 
@@ -44,9 +45,10 @@
 	}
 
 	@media only screen and (min-width: 767px) {
-		.loader-title {	position: absolute;	margin: auto; padding: 0px; color: #FFF; text-align: center; left: 0; bottom: 50%; right:0; font-size: 30px; text-transform: uppercase; font-family: snapITC; z-index:1; }
+		.loader-title {	position: absolute;	margin: auto; padding: 0px; color: #FFF; text-align: center; left: 0; bottom: 50%; right:0; font-size: 30px; text-transform: uppercase; font-family: 'snap-itc'; z-index:1; }
 	
-		.loader-title span { color: #a81c51; font-size: 30px; font-family: snapITC; text-transform: uppercase; margin: 0px 110px 0px 12px; }
+		.loader-title span { color: #a81c51; font-size: 30px; font-family: 'snap-itc'; text-transform: uppercase; margin: 0px 110px 0px 12px; }
+
 
 		.loader-title::before { 
 			background: url("../images/af-small.png") no-repeat scroll 100% 100%;
