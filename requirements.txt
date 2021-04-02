@@ -6,7 +6,7 @@ docutils==0.15.2
 jmespath==0.9.5
 Pillow==8.1.1
 pytz==2020.1
-PyYAML==5.2
+PyYAML==5.4
 rsa==4.1
 s3transfer==0.3.3
 sqlparse==0.4.1
