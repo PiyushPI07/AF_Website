@@ -92,17 +92,17 @@ def check_back_later(request, t):
     if StaticContent.objects.count():
         dates = StaticContent.objects.first()
         if t == 's_art404':
-            disp_text = 'Sand Art Competition '
+            disp_text = 'Sand Art Competition Registrations'
             date = dates.udaan_date.strftime('%B')
         if t == 'recs404':
-            disp_text = 'Recruitment'
+            disp_text = 'Recruitments'
             date = dates.recs_date.strftime('%B')
     else:
         if t == 's_art404':
-            disp_text = 'Sand Art Competition '
+            disp_text = 'Sand Art Competition Registrations'
             date = "January"
         if t == 'recs404':
-            disp_text = 'Recruitment'
+            disp_text = 'Recruitments'
             date = "August"
         
     context = {
@@ -134,6 +134,7 @@ def gallery(request):
         'event_image': event_image
     }
     return render(request, 'contact.html', context=context)
+
 def thank_you(request):
     return render(request, 'thank_you.html', context={})
 
