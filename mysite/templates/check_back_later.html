@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div id="main">
+    <div class="breadcrumb" style="margin: 70px 0px 70px 0px;"><!-- *BreadCrumb Starts here** -->
+        <div class="container">
+            <h2 style="font-size: 80px;">Sorry!</h2>
+            <!-- <h4>Please check back in {{date}}</h4> -->
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="container">
+        <h2>Thank you for showing interest!</h2>
+        <h1>But, {{disp_text}} are   currently closed :(</h1>
+        <h2>Please check back again in {{date}}</h2>
+    </div>
+</div>
+
+{% endblock content %}
+    

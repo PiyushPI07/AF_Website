@@ -16,36 +16,56 @@
             <div class="main-title pullDown">
                 <h3> Artists' Forum NITK </h3>
             </div>
-            <p style="text-align: justify;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac. Eu non diam phasellus vestibulum lorem sed risus ultricies tristique. Quis enim lobortis scelerisque fermentum dui faucibus. Augue ut lectus arcu bibendum at varius vel pharetra. Risus nec feugiat in fermentum posuere urna nec tincidunt. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Feugiat in fermentum posuere urna nec tincidunt praesent semper. Condimentum vitae sapien pellentesque habitant. Lectus mauris ultrices eros in cursus turpis. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Scelerisque varius morbi enim nunc faucibus a. Maecenas volutpat blandit aliquam etiam erat velit. Arcu risus quis varius quam. Ut porttitor leo a diam sollicitudin tempor id. Elementum nibh tellus molestie nunc non blandit massa enim. Nunc faucibus a pellentesque sit.
+            <p class="desc" >
+                We are Artists’ Forum, NITK: a non-exclusive club of students across all years and branches with a shared love for art. We celebrate art by way of sanding thermocol and mixing paint. We collaborate by way of painting walls and decorating halls. Most importantly, we are a family.To commemorate NITK’s fests, Engineer and Incident, we decorate the entrance to the main building of NITK to reflect the theme for the fest (In 2020, however, we decorated throughout the campus, a rogue action befitting the year). In the past, we have meddled with time, hopped aboard the Oriental Express and took a Global Odyssey. We hold the kite flying festival, Udaan (our flagship event) in January, an annual event that is festive and memorable. We entertain, build sandcastles, and of course, fly kites! But, we are also a club that values fun. We also love to eat, especially when it’s a treat from the seniors! If all of this excites you, consider applying to the club. Please note that you don’t have to be an excellent artist to join the club (some of us cannot draw a tree without a reference). You need only have creativity, willingness to collaborate, and cravings for late-night dinners (of which there are a lot!).
             </p>
         </div>
         <div class="dt-sc-hr-invisible-small"> </div>
+        <div class="main-title"></div> <!--Just for the sake of that fancy line-->
+
+        <h2>From Faculty Advisors' Desk</h2>
+        <div class="container fac-ad-wrapper">
+            <div class="facad-cont">
+                <q>
+                    My journey with this club started in 2018 as a Faculty Advisor. Since my school days, my all-time hobby is drawing and painting. I stepped into this club just as a person having great passion and admiration for art; with an interest to explore various activities related to art. Till date, I enjoy every bit of my experience and interaction with the club members, my association in planning and execution of various events and projects. More than being an advisor, I learnt a lot from the students. The passion and dedication shown by every student member of the club astonished me many a time. The vigour to make any event a grand success and the sincere efforts taken by each member amidst their academic pressure deserve a special mention and great appreciation. It's a pride to be a part of this art family. I wish the club to reach greater heights with flying colours in all the years to come!
+                </q>
+            </div>
+            <div class="facad-desc">
+                <a href="https://macs.nitk.ac.in/faculty/senthil-thilak"><h3 style="text-transform: none;">Dr. A Senthil Thilak</h3></a>
+                
+                <p>Department of Mathematical And Computational Sciences <br> National Instititute of Technology Karnataka, Surathkal</p>
+            </div>
+        </div>
+
         <div class="main-title"></div> <!--Just for the sake of that fancy line-->
 
 
         <h2>Testimonials</h2>
         <div class="container">
             <section id="primary" class="content-full-width">
-                
-                
-                <div class="dt-sc-one-column column first">
-                    <div class="recent-gallery-container">
+                <div>
+                    <div class="recent-gallery-container" style="text-align: justify;" >
                         <ul class="recent-gallery">
                             {% for testimonial in testimonials %}
                             <li>
-                                <blockquote style="margin:40px">
+                                <blockquote >
                                     <span class="fa fa-quote-left fa-3x" style="color: #a81c51;"></span>
-                                    <q>{{testimonial.testimonial}}</q>
+                                    <q style="font-size: 20px;">{{testimonial.testimonial}}</q>
                                     <h6>{{testimonial.member_name}}</h6>
-                                    <a>{{testimonial.post}}</a>                                                                        
+                                    
+                                    {% if testimonial.post != 13 %}
+                                    <a>Batch {{testimonial.batch}} {{testimonial.get_post_display}}</a>
+                                    {% else %}
+                                    <p>Batch of {{testimonial.batch}}</p>                                                                      
+                                    {% endif %}
+                                        
                                 </blockquote>
                             </li>
                             {% endfor %}
                         </ul>                           	
                     </div>
                 </div>
-                    
+            </section> 
         </div>
         <div class="dt-sc-hr-invisible-small"> </div>
 
@@ -56,10 +76,11 @@
             </div>
             <div id="contact_us" class="dt-sc-contact-info animate" data-animation="fadeInLeft" data-delay="100">
                 <h3>Reach us at</h3>
-                <div class="dt-sc-contact-details"><span class="fa fa-map-marker"></span>Address: National Institute of Technology, Karnataka, India </div>
+                <div class="dt-sc-contact-details"><span class="fa fa-map-marker"></span>Address: National Institute of Technology Karnataka (NITK), Surathkal, India </div>
                 <div class="dt-sc-contact-details"><span class="fa fa-tablet"></span> Phone: +91 91603 61774 </div>
                 <div class="dt-sc-contact-details"><span class="fa fa-envelope"></span> Email: <a href="mailto:nitkartistforum@gmail.com">nitkartistforum@gmail.com</a> </div>
-                <div class="dt-sc-contact-details"><span class="fa fa-globe"></span> Web: <a href="http://wedesignthemes.com">http:afnitk.com</a> </div>
+
+                <div class="dt-sc-contact-details"><span class="fa fa-globe"></span> Web: <a href="http://af.nitk.ac.in">https://af.nitk.ac.in</a> </div>
                 <ul class="type3 dt-sc-social-icons">
                     <li class="dribbble"><a href="https://www.instagram.com/afnitk/?hl=en"> <i class="fa fa-instagram"></i> </a></li>
                     <li class="facebook"><a href="https://www.facebook.com/afnitk"> <i class="fa fa-facebook"></i> </a></li>

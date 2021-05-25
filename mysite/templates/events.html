@@ -28,7 +28,7 @@
                         
                     <div class="dt-sc-one-half column first" style="margin-left: 9px;"> 
                         <div class="dt-sc-icon-content-wrapper">
-                            <div class="dt-sc-ico-content animate" data-animation="fadeInRight" data-delay="100">
+                            <div class="dt-sc-ico-content fadeRight"  data-delay="100">
                                 <div class="recent-gallery-container">
                                     <ul class="recent-gallery">                                       
                                         {% for image in event_images %}                                           
@@ -38,11 +38,13 @@
                                         {% endfor %}
                                     </ul>
                                 </div>
-                                <div class="dt-sc-hr-invisible-very-small"></div>
                                 <h5>{{event.title}}</h5>
-                                <p><span>Date:</span>{{event.date|date:"D, d M Y"}}</p>
-                                <div class="dt-sc-hr-invisible-very-small"></div>
-                                <p>{{event.description}} <a href="{{event.resources}}">more</a> </p>
+                                
+                                {% if event.date %}
+                                <p>Date: {{event.date|date:"D, d M Y"}}</p>
+                                {% endif %}
+                                <!-- <div class="dt-sc-hr-invisible-very-small"></div> -->
+                                <p>{{event.description}} </a> </p>
                             </div>
                         </div>
                     </div>
@@ -65,7 +67,7 @@
                         
                     <div class="dt-sc-one-half column first" style="margin-left: 9px;"> 
                         <div class="dt-sc-icon-content-wrapper">
-                            <div class="dt-sc-ico-content animate" data-animation="fadeInRight" data-delay="100">
+                            <div class="dt-sc-ico-content fadeRight"  data-delay="100">
                                 <div class="recent-gallery-container">
                                     <ul class="recent-gallery">                                       
                                         {% for image in event_images %}                                           
@@ -75,11 +77,12 @@
                                         {% endfor %}
                                     </ul>
                                 </div>
-                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                <!-- <div class="dt-sc-hr-invisible-very-small"></div> -->
                                 <h5>{{event.title}}</h5>
-                                <p><span>Date:</span>{{event.date|date:"D, d M Y"}}</p>
-                                <div class="dt-sc-hr-invisible-very-small"></div>
-                                <p>{{event.description}} <a href="{{event.resources}}">more</a></p>
+                                {% if event.date %}
+                                <p>Date: {{event.date|date:"D, d M Y"}}</p>
+                                {% endif %}
+                                <p>{{event.description}}</a></p>
                             </div>
                         </div>
                     </div>

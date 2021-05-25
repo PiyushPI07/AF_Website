@@ -5,19 +5,6 @@
 <!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
 <style>
-    @media only screen and (max-width: 767px) {
-        .large-header h1{
-            font-size: 40px !important;
-        }
-    }
-    @media only screen and (max-width: 479px) {
-        .large-header h1{
-            font-size: 0px;
-        }
-    }
-    /* body{
-        background: url({% static "images/bg-trial.jpg" %}) !important;
-    } */
 </style>
 <head>
 	<meta charset="utf-8">
@@ -27,7 +14,7 @@
 	<link rel="icon" type="image/jpg" href="{% static 'images/af.png' %}"/>
     <meta name="description" content="">
 	<meta name="author" content="">
-	
+	<link rel="preload" as="font" href="{% static 'fonts/snap_itc.woff' %}" type="font/woff2" crossorigin="anonymous">
 	<!--[if lt IE 9]>
 	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -39,11 +26,11 @@
     <!-- **Additional - stylesheets** -->
     <link href="{% static 'css/animations.css' %}" rel="stylesheet" type="text/css" media="all" />
     <link href="{% static 'css/animation.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'css/pace.css' %}" rel="stylesheet" type="text/css" />
 	<link id="shortcodes-css" href="{% static 'css/shortcodes.css' %}" rel="stylesheet" type="text/css" media="all"/>
     <link id="skin-css" href="{% static 'skins/red/style.css' %}" rel="stylesheet" media="all" />
     <link href="{% static 'css/isotope.css' %}" rel="stylesheet" type="text/css" media="all" />
     <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static 'css/pace.css' %}" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" media="all"/>
     
     <link id="light-dark-css" href="{% static 'dark/dark.css' %}" rel="stylesheet" media="all" />
@@ -58,7 +45,7 @@
 <body>
     <div class="loader-wrapper">
         <div id="large-header" class="large-header preloader-text">
-            <h1 class="loader-title"><span>Artists'  </span>Forum</h1>
+            <h1 class="loader-title"><span>Artists'</span>Forum</h1>
         </div>        
     </div>
 <!-- loader ends-->
@@ -87,15 +74,20 @@
                         <li class="menu-item-simple-parent"><a title="Team" href="{% url 'team' %}">Team</a></li>
                         <li class="menu-item-simple-parent"><a title="About" href="{% url 'about' %}">About Us</a></li>
                         
-                        {% if request.user.is_authenticated %}
-                        <li class="menu-item-simple-parent"><a title="Application Statust" href="{% url 'application status' %}">Application Status</a></li>
+
+                        {% if recruiting %}
+                            {% if request.user.is_authenticated %}
+                            <li class="menu-item-simple-parent"><a title="Application Statust" href="{% url 'application status' %}">Application Status</a></li>
+                            {% else %}
+                            <li class="menu-item-simple-parent dropdown-widget"><a href="#" class="dropdown-toggle" data-toggle="dropdown-widget" data-hover="dropdown-widget" aria-haspopup="true">Recruitments<span class="has-child animation"></span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="{% url 'register' %}">Register</a></li>
+                                    <li><a href="{% url 'login' %}">Log In</a></li>
+                                </ul>
+                            </li>
+                            {% endif %}
                         {% else %}
-                        <li class="menu-item-simple-parent dropdown-widget"><a href="#" class="dropdown-toggle" data-toggle="dropdown-widget" data-hover="dropdown-widget" aria-haspopup="true">Recruitments<span class="has-child animation"></span></a>
-                            <ul class="sub-menu">
-                            	<li><a href="{% url 'register' %}">Register</a></li>
-                                <li><a href="{% url 'login' %}">Log In</a></li>
-                            </ul>
-                        </li>
+                        <li class="menu-item-simple-parent"><a title="About" href="{% url 'oops' 'recs404' %}">Recruitments</a></li>
                         {% endif %}
                             
                     </ul>
@@ -108,7 +100,7 @@
 <div class="slider-container" style="display: flex;">
     <div class="slider fullwidth-section parallax" style="background: url({% static 'images/bg-trial.jpg' %});">
         <img id="landing-image" style="align-self: center;" src="{% static 'images/Logo.png' %}" alt="">
-        <h2 id="landing-heading" style="font-family: snapITC;">ARTISTS' FORUM</h2>
+        <h2 id="landing-heading" style="font-family: snap-itc;">ARTISTS' FORUM</h2>
         <button  class="slider-button" id="slider-button" >
             Explore
         </button>
@@ -152,7 +144,7 @@
                                 <figcaption>
                                     <div class="portfolio-detail">
                                         <div class="views">
-                                            <div class="fa fa-camera-retro" style="margin-right: 1em;"></div><span>3</span>
+                                            <div class="fa fa-camera-retro" style="margin-right: 1em;"></div><span></span>
                                         </div>
                                         <div class="portfolio-title">
                                             <h5>{{art.title}}</h5>
@@ -191,7 +183,7 @@
                 <li><a href="https://github.com/Artists-Forum-NITK" class="fa fa-github"></a></li>
             </ul>
             <ul>
-                <p> <a href="#">ARTISTS' FORUM NITK Surathkal</a></p>
+                <p>Designed with <i class="fa fa-heart" style="color:#a81c51;"></i> at <a href="#">ARTISTS' FORUM NITK Surathkal</a></p>
             </ul>
             
             

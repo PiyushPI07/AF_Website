@@ -22,7 +22,7 @@ urlpatterns = [
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),name='password_reset_complete'),
 
     #mysite urls
-    path('admin/', admin.site.urls),
+    path('controlaf/', admin.site.urls),
     path('', views.index, name='index'),
     path('index/', views.index, name='index1'),
     path('about/', views.about, name='about'),
@@ -35,6 +35,7 @@ urlpatterns = [
     path('team/', views.team, name = 'team'),
     path('udaan/thank_you', views.thank_you, name='thank_you'),
     path('volunteer_registration', volunteer_form_view, name='volunteer_registration'),
+    path('oops/<str:t>', views.check_back_later, name='oops')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

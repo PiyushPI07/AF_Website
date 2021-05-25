@@ -6,6 +6,29 @@
 <head>
     <link href="{% static 'css/animation.css' %}" rel="stylesheet" type="text/css" media="all" />
 
+    <style>
+        .img-wrap {
+            /* width: 200px;
+            height: 150px; */
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            margin: 0;
+        }
+        div > img {
+            display: block;
+            position: absolute;
+            /* top: 50%;
+            left: 50%; */
+            min-height: 50%;
+            min-width: 50%;
+            /* width: 50%; */
+            /* transform: translate(-50%, -50%); */
+        }
+        h3 {
+            font-size: 20px;
+        }
+    </style>
 </head>
     <div id="main">
         <div class="breadcrumb"><!-- *BreadCrumb Starts here** -->
@@ -19,53 +42,118 @@
             <div class="dt-sc-hr-invisible-small"> </div>
             <div class="dt-sc-tabs-container">
                 <ul class="dt-sc-tabs-frame">
-                    <li><a href="#" class="current"> Core </a></li>
+                    <li><a href="#" class="current"> Executive Teams </a></li>
                     <li><a href="#"> Executive Members </a></li>
-                    <!-- <li><a href="#"> Web Team </a></li> -->
                     <li><a href="#"> Alumni </a></li>
                 </ul>
 
 
-                <!---Core Tab-->
+
                 <div class="dt-sc-tabs-frame-content">
-                    <div class="service-grid">                       
-                        {% for member in members %}
-                            {% if member.curr_core %}
-                                <div class="dt-sc-one-half column first">
-                                    <div class="dt-sc-icon-content-wrapper">
-                                        <div class="dt-sc-one-half column first">
-                                            <div class="dt-sc-ico-content  fadeRight">
-                                                <h3> {{member.member_name}}</h3>
-                                                <p style="font-size: 25px;">{{member.post}}</p>
-                                                <p>
-                                                    <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
-                                                    <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="dt-sc-one-half column dt-sc-icon-wrapper">
-                                            <img class="fadeRight"  src="{{member.member_img.url}}" style="width: 55%;" alt="">
+                    <div class="container">
+                        <div class="dt-sc-toggle-frame-set">
+                            <div class="dt-sc-toggle-frame">
+                                <h5 class="dt-sc-toggle-accordion"><a href="#">Core</a></h5>
+                                <div class="dt-sc-toggle-content">
+                                    <div class="block">
+                                        <div class="service-grid">
+                                            {% for member in core_members %}
+                                                    <div class="dt-sc-one-half column first">
+                                                        <div class="dt-sc-icon-content-wrapper img-wrap">
+                                                            <div class="dt-sc-one-half column first">
+                                                                <div class="dt-sc-ico-content fadeRight" data-delay="100">
+                                                                    <h3> {{member.member_name}}</h3>
+                                                                    <p style="font-size: 20px;">{{ member.get_post_display }}</p>
+                                                                    <p>
+                                                                        <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
+                                                                        <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dt-sc-one-half column dt-sc-icon-wrapper">
+                                                                <img class= "fadeRight"  data-delay="100" src="{{member.member_img.url}}" style="width: 60%;" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                 </div>
-                            {% endif %}
-                        {% endfor %}
+                            </div>
+                            <div class="dt-sc-toggle-frame">
+                                <h5 class="dt-sc-toggle-accordion"><a href="#">Media and Content</a></h5>
+                                <div class="dt-sc-toggle-content">
+                                    <div class="block">
+                                        <div class="service-grid">
+                                            {% for member in med_and_content_members %}
+                                                    <div class="dt-sc-one-half column first">
+                                                        <div class="dt-sc-icon-content-wrapper img-wrap">
+                                                            <div class="dt-sc-one-half column first">
+                                                                <div class="dt-sc-ico-content fadeRight" data-delay="100">
+                                                                    <h3> {{member.member_name}}</h3>
+                                                                    <p>Batch of {{member.batch}}</p>
+                                                                    <p>
+                                                                        <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
+                                                                        <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dt-sc-one-half column dt-sc-icon-wrapper">
+                                                                <img class= "fadeRight"  data-delay="100" src="{{member.member_img.url}}" style="width: 60%;" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dt-sc-toggle-frame">
+                                <h5 class="dt-sc-toggle-accordion"><a href="#">Website</a></h5>
+                                <div class="dt-sc-toggle-content">
+                                    <div class="block">
+                                        <div class="service-grid">
+                                            {% for member in web_members %}
+                                                    <div class="dt-sc-one-half column first">
+                                                        <div class="dt-sc-icon-content-wrapper img-wrap">
+                                                            <div class="dt-sc-one-half column first">
+                                                                <div class="dt-sc-ico-content fadeRight" data-delay="100">
+                                                                    <h3> {{member.member_name}}</h3>
+                                                                    <p>Batch of {{member.batch}}</p>
+                                                                    <p>
+                                                                        <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
+                                                                        <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dt-sc-one-half column dt-sc-icon-wrapper">
+                                                                <img class= "fadeRight"  data-delay="100" src="{{member.member_img.url}}" style="width: 60%;" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
                     </div>
                 </div>
-
 
 
                 <!--Executive Members Div-->
                 <div class="dt-sc-tabs-frame-content"> 
                     <div class="service-grid">
-                        {% for member in members %}
-                            {% if not member.curr_core  %}
+                        {% for member in executive_members %}
+                            <!-- {% if not member.curr_core  %} -->
                                 <div class="dt-sc-one-half column first">
-                                    <div class="dt-sc-icon-content-wrapper">
+                                    <div class="dt-sc-icon-content-wrapper img-wrap">
                                         <div class="dt-sc-one-half column first">
                                             <div class="dt-sc-ico-content fadeRight">
                                                 <h3> {{member.member_name}}</h3>
-                                                <div class="dt-sc-hr-invisible-very-small"></div>
+                                                <p>Batch of {{member.batch}}</p>
+                                                <!-- <div class="dt-sc-hr-invisible-very-small"></div> -->
                                                 <p>
                                                     <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
                                                     <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
@@ -73,46 +161,18 @@
                                             </div>
                                         </div>
                                         <div class="dt-sc-one-half column dt-sc-icon-wrapper">
-                                            <img class= "fadeRight"  src="{{member.member_img.url}}" style="width: 55%;" alt="">
+                                            <img class= "fadeRight"  src="{{member.member_img.url}}" style="width: 60%;" alt="">
                                         </div>
                                     </div>
                                 </div>
-                            {% endif %}
+                            <!-- {% endif %} -->
                         {% endfor %}
                     </div>
                 </div>
 
-                <!--Extra Teams tab-->
-                <!-- <div class="dt-sc-tabs-frame-content"> 
-                    <div class="service-grid">
-                        {% for member in members %}
-                            {% if member.post == "web team" %}
-                                <div class="dt-sc-one-half column first">
-                                    <div class="dt-sc-icon-content-wrapper">
-                                        <div class="dt-sc-one-half column first">
-                                            <div class="dt-sc-ico-content fadeRight" data-delay="100">
-                                                <h6> {{member.member_name}}</h6>
-                                                <p><span>Post:</span>{{member.post}}</p>
-                                                <div class="dt-sc-hr-invisible-very-small"></div>
-                                                <p>
-                                                    <a href="mailto:{{member.email}}"><i class="fa fa-envelope fa-2x"></i></a>
-                                                    <a href="{{member.insta}}"><i class="fa fa-instagram fa-2x"></i></a>
-                                                </p>
-                                                <div class="dt-sc-hr-invisible-very-small"></div>
-                                            </div>
-                                        </div>
-                                        <div class="dt-sc-one-half column dt-sc-icon-wrapper">
-                                            <img class= "fadeRight"  data-delay="100" src="{{member.member_img.url}}" style="width: 55%;" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div> -->
+                <!-- Alumni Tab -->
                 <div class="dt-sc-tabs-frame-content">
                     <div class="container">
-                        
                         <div class="dt-sc-toggle-frame-set">
                         {% for batch in batches_to_display %}
                         <div class="dt-sc-toggle-frame">
@@ -125,13 +185,13 @@
                                         
                                             {% if alumnus.batch == batch|stringformat:"i" %}
                                                 <div class="dt-sc-one-half column first">
-                                                    <div class="dt-sc-icon-content-wrapper">
+                                                    <div class="dt-sc-icon-content-wrapper img-wrap">
                                                         <div class="dt-sc-one-half column first">
                                                             <div class="dt-sc-ico-content fadeRight" data-delay="100">
                                                                 <h3> {{alumnus.member_name}}</h3>
                                                                 
-                                                                {% if alumnus.post %}
-                                                                    <p style="font-size: 15px;">{{alumnus.post}}</p>
+                                                                {% if alumnus.post != 13 %}
+                                                                    <p style="font-size: 15px;">{{alumnus.get_post_display}}</p>
                                                                     {% else %}
                                                                     <div class="dt-sc-hr-invisible-small"></div>
                                                                 {% endif %}
@@ -143,7 +203,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="dt-sc-one-half column dt-sc-icon-wrapper">
-                                                            <img class= "fadeRight"  data-delay="100" src="{{alumnus.member_img.url}}" style="width: 55%;" alt="">
+                                                            <img class= "fadeRight"  data-delay="100" src="{{alumnus.member_img.url}}" style="width: 60%;" alt="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -163,6 +223,7 @@
                             
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>

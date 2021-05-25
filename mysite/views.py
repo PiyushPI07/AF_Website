@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponseNotFound
 from account.forms import VolunteerForm, SandArtRegistrationForm
 from django.views.decorators.cache import cache_control
 from django.shortcuts import get_object_or_404, render
@@ -11,6 +11,7 @@ from .models import *
 def index(request):
     full_member_list = Member.objects.all()
     art_list = Art.objects.all()
+    recruitments = True
     # art_image = ArtImage.objects.all()
     image_gallery_short = ''
     event_list = []
@@ -20,6 +21,7 @@ def index(request):
         'event_list': event_list,
         'image_gallery_short': image_gallery_short,
         'render_recruitment_form': True,
+        'recruitments': recruitments
         # 'art_image': art_image,
     }
     return render(request, 'index.html', context=context)
@@ -50,18 +52,6 @@ def blog_post(request,pk):
         'blog': blog,
         'comments': comments
     }
-    # if request.POST:
-    #     form = CommentForm(request.POST)
-    #     if form.is_valid():
-    #         form_data = form.save(commit=False)
-    #         form_data.post = blog
-    #         form_data.save()
-    #         HttpResponseRedirect('')
-    #     else:
-    #         context['form'] = form
-    # else:
-    #     form = CommentForm()
-    #     context['form'] = form
     if request.POST:
         author = request.POST.get("txtname")
         email = request.POST.get("txtemail")
@@ -72,29 +62,16 @@ def blog_post(request,pk):
     return render(request, 'blog_post.html', context=context)
 
 
-# def udaan(request):
-#     full_member_list = Member.objects.all()
-#     image_gallery_full = Image.objects.all()
-#     art_list = Art.objects.all()
-#     blog_list = Blog.objects.all()
-#     event_list = Event.objects.all()
-#     image_gallery_short = Image.objects.filter(display_on_index=True)
-#     context = {
-#         'full_member_list': full_member_list,
-#         'image_gallery_full': image_gallery_full,
-#         'art_list': art_list,
-#         'blog_list': blog_list,
-#         'event_list': event_list,
-#         'image_gallery_short': image_gallery_short
-#     }
-#     return render(request, 'udaan.html', context=context)
-
 def udaan_view(request, *args, **kwargs):
-    static_data= Udaan_static.objects.get(id=1)
+    if StaticContent.objects.count() == 0:
+        return HttpResponseNotFound("<h1>Page not found</h1>")
+    static_data= StaticContent.objects.first()
     carousel_imgs = Udaan_image.objects.filter(display_on_caurosel = True)
     events = Udaan_event.objects.all()
     context = {
-        'static': static_data,
+        'desc': static_data.udaan_description,
+        'date': static_data.udaan_date.month,
+        'form_open': static_data.sand_art_form,
         'carousel_images': carousel_imgs,
         'event_list': events,
         'is_form_submitted': False,
@@ -111,6 +88,28 @@ def udaan_view(request, *args, **kwargs):
         context['form'] = form
     return render(request, 'udaan.html', context)
 
+def check_back_later(request, t):
+    if StaticContent.objects.count():
+        dates = StaticContent.objects.first()
+        if t == 's_art404':
+            disp_text = 'Sand Art Competition Registrations'
+            date = dates.udaan_date.strftime('%B')
+        if t == 'recs404':
+            disp_text = 'Recruitments'
+            date = dates.recs_date.strftime('%B')
+    else:
+        if t == 's_art404':
+            disp_text = 'Sand Art Competition Registrations'
+            date = "January"
+        if t == 'recs404':
+            disp_text = 'Recruitments'
+            date = "August"
+        
+    context = {
+        'disp_text': disp_text,
+        'date': date
+    }
+    return render(request, 'check_back_later.html', context=context)
 
 def events(request):
     event_list = Event.objects.all()
@@ -135,6 +134,7 @@ def gallery(request):
         'event_image': event_image
     }
     return render(request, 'contact.html', context=context)
+
 def thank_you(request):
     return render(request, 'thank_you.html', context={})
 
@@ -145,13 +145,21 @@ def contact(request):
     return render(request, 'contact.html')
 
 def team(request):
-    members = Member.objects.filter(active=True).order_by('batch', 'member_name')
+    members = Member.objects.filter(active=True).order_by('post', 'batch', 'member_name')
     year = datetime.datetime.now().year
-    batches_to_display = [year-1, year-2, year-3, year-4]
-    alumni = Member.objects.filter(batch__in=batches_to_display).order_by('-post', 'member_name')
+    batches_to_display = [year-1, year-2, year-3]
+    exc_members = members.filter(team="")
+    core_members = members.filter(team="Core")
+    mnc_members = members.filter(team__in=["Media and Content Team", "Both Media and Website Team"])
+    web_members = members.filter(team__in=["Website Team", "Both Media and Website Team"])
+    alumni = Member.objects.filter(batch__in=batches_to_display).order_by('post', 'member_name')
     context = {
         'members': members,
         'batches_to_display': batches_to_display,
-        'alumni': alumni
+        'alumni': alumni,
+        'executive_members': exc_members,
+        'core_members' : core_members,
+        'med_and_content_members': mnc_members,
+        'web_members' : web_members
     }
     return render(request, 'team.html', context=context)
