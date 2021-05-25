@@ -135,4 +135,4 @@ media/images/
 
 
 #secrets
-*/secrets.py
+af_website/secret.py
