@@ -132,3 +132,7 @@ dmypy.json
 account/migrations/*.py
 mysite/migrations/*.py
 media/images/
+
+
+#secrets
+af_website/secrets.py
